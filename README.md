@@ -38,6 +38,9 @@ League of Legends is an online multiplayer battle arena game in which players ca
 * Thursday Morning
     - Deploy to GitHub
 
+# Bonus Features
+* Background music that the user can mute
+* Audio that plays when an individual champion's profile is brought up
 
 
 -All data is provided by Data Dragon (https://riot-api-libraries.readthedocs.io/en/latest/ddragon.html#data-dragon) through static data files-
