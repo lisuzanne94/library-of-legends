@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "**Library of Legends**",
   "main": "index.js",
+  "browserslist": [
+      "defaults"
+    ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --watch --mode=development",
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
@@ -16,5 +21,18 @@
   "bugs": {
     "url": "https://github.com/lisuzanne94/library-of-legends/issues"
   },
-  "homepage": "https://github.com/lisuzanne94/library-of-legends#readme"
+  "homepage": "https://github.com/lisuzanne94/library-of-legends#readme",
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.18.2",
+    "css-loader": "^6.3.0",
+    "mini-css-extract-plugin": "^2.4.2",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.58.0",
+    "webpack-cli": "^4.9.0"
+  }
 }
