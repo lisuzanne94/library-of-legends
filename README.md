@@ -14,6 +14,7 @@ League of Legends is an online multiplayer battle arena game in which players ca
 
 # Technologies, Libraries, & APIs
 * Webpack to bundle JS code
+**Static data files**
 * Riot Games/Data Dragon hosted champion data: http://ddragon.leagueoflegends.com/cdn/11.20.1/data/en_US/champion.json
 * Riot Games/Data Dragon hosted champion loading screen image: http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Aatrox_0.jpg
 * Riot Games/Data Dragon hosted individual champion data: http://ddragon.leagueoflegends.com/cdn/11.20.1/data/en_US/champion/Aatrox.json
@@ -43,5 +44,4 @@ League of Legends is an online multiplayer battle arena game in which players ca
 * Audio that plays when an individual champion's profile is brought up
 
 
--All data is provided by Data Dragon (https://riot-api-libraries.readthedocs.io/en/latest/ddragon.html#data-dragon) through static data files-
 
