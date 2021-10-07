@@ -1,0 +1,20 @@
+{
+  "name": "library-of-legends",
+  "version": "1.0.0",
+  "description": "**Library of Legends**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisuzanne94/library-of-legends.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisuzanne94/library-of-legends/issues"
+  },
+  "homepage": "https://github.com/lisuzanne94/library-of-legends#readme"
+}
