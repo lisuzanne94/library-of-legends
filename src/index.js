@@ -1,8 +1,9 @@
-// const allChampData = require('./data/champions/allChampData.json')
 const ChampData = require('./scripts/get_champ_data.js')
+const IndexPage = require('./views/index_page')
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("hello world")
+    const htmlEl = document.querySelector("body");
+    const indexPage = new IndexPage (htmlEl)
 })
 
 // console.log(champData);
