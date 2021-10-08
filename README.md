@@ -10,7 +10,7 @@ League of Legends is an online multiplayer battle arena game in which players ca
 * Ability to click on a single champion and bring up their "show page"
 
 # Wireframe
-<img src="assets/wireframe.png"></img>
+<img src="wireframes/wireframe.png"></img>
 
 # Technologies, Libraries, & APIs
 * Webpack to bundle JS code
