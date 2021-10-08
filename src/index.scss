@@ -1,9 +1,20 @@
 h2 {
-    color: plum;
+    color: black;
 }
 
+.champs-list ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.champs-list li {
+    display: inline-block;
+}
+
+
+
 img {
-    width: 150px;
+    width: 100px;
     height: auto;
 }
 

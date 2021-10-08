@@ -1,4 +1,4 @@
-const ChampData = require('../scripts/get_champ_data.js')
+import ChampData from './scripts/get_champ_data.js'
 
 class IndexPage {
     constructor(htmlEl) {
