@@ -1,19 +1,19 @@
-import ChampData from './scripts/get_champ_data.js'
+import ChampData from '../scripts/get_champ_data.js'
 
-class IndexPage {
+class SingleChampPage {
     constructor(htmlEl) {
         this.htmlEl = htmlEl;
         this.showPortrait("Aatrox");
     }
     // showing single portrait
-    showPortrait (champName) {
-        const champNameHeader = document.getElementById("champ-name");
-        const champPortrait = document.getElementById("champ-portrait");
+    showPortrait (champKey) {
+        const champNameHeader = document.querySelector("h1")
+        const champPortrait = document.querySelector("img");
 
-        champNameHeader.innerText = champName;
-        champPortrait.setAttribute("src", ChampData.default.getChampPortraitURL(champName));
+        champNameHeader.innerText = champKey;
+        champPortrait.setAttribute("src", ChampData.getChampPortraitURL(champKey));
     }
 }
 
-export default IndexPage
-// console.log("inside index_page.js")
+export default SingleChampPage
+// console.log("inside single_champ_page.js")
