@@ -1,17 +1,39 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-h2 {
-  color: black;
-}
-
 .all-champs-list {
   display: flex;
   flex-wrap: wrap;
+  width: 750px;
   justify-content: space-between;
+  padding: 50px;
 }
 
-img {
+.all-champs-list figure {
+  width: 150px;
+  height: 230px;
+}
+
+.all-champs-list h2 {
+  color: black;
+}
+
+.all-champs-list li {
+  margin: 10px;
+}
+
+.all-champs-list img {
   width: 100px;
   height: auto;
+  transition: width 0.5s;
+}
+
+.all-champs-list img:hover {
+  width: 110px;
+  height: auto;
+  transition: width 0.5s;
+}
+
+.single-champs-page {
+  z-index: 1;
 }

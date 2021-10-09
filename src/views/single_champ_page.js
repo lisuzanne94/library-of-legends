@@ -5,8 +5,8 @@ class SingleChampPage {
     constructor(pageDiv, champKey) {
         this.pageDiv = pageDiv;
         this.showPortrait(champKey);
-        this.showPage.bind(this);
-        this.hidePage.bind(this);
+        // this.showPage.bind(this);
+        // this.hidePage.bind(this);
     }
     // showing single portrait
     showPortrait (champKey) {
@@ -17,15 +17,16 @@ class SingleChampPage {
         champPortrait.setAttribute("src", ChampData.getChampPortraitURL(champKey));
     }
 
-    // show page div
-    showPage () {
-        this.pageDiv.style.display = "";
-    }
+    // maybe useful later? but calling in view.js event handler for now
+        // // show page div
+        // showPage () {
+        //     this.pageDiv.style.display = "";
+        // }
 
-    // hide page div
-    hidePage () {
-        this.pageDiv.style.display = "none";
-    }
+        // // hide page div
+        // hidePage () {
+        //     this.pageDiv.style.display = "none";
+        // }
 }
 
 export default SingleChampPage

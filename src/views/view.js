@@ -36,9 +36,9 @@ class View {
         const indexPageDiv = document.querySelector(".index-page");
         const singleChampDiv = document.querySelector(".single-champ-page");
         const singleChampPage = new SingleChampPage(singleChampDiv, champKey)
-        // console.log(this)
+
         indexPageDiv.style.display = "none";
-        singleChampDiv.style.display = "";
+        singleChampDiv.removeAttribute("style");
         
     }
 
