@@ -13,7 +13,7 @@ class SingleChampPage {
         const champNameHeader = document.querySelector("h1")
         const champPortrait = document.querySelector(".single-champ-page img");
 
-        champNameHeader.innerText = champKey;
+        champNameHeader.innerText = ChampData.getChampName(champKey);
         champPortrait.setAttribute("src", ChampData.getChampPortraitURL(champKey));
     }
 
