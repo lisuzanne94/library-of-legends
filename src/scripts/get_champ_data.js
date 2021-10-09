@@ -23,6 +23,11 @@ const ChampData = {
     // get champ's loading screen portrait URL
     getChampPortraitURL (champName) {
         return `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champName}_0.jpg`
+    },
+
+    // get a champ's tags
+    getChampTags (champKey) {
+        return allChampData.data[`${champKey}`].tags;
     }
 }
 
@@ -32,6 +37,7 @@ const ChampData = {
     // console.log(allChampData.data["Velkoz"].name);
 // console.log(ChampData.getAllChampNames())
 // console.log(ChampData.getChampName("Aatrox"))
+console.log(ChampData.getChampTags("Ahri"))
 
 export default ChampData;
 

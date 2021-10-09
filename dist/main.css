@@ -1,11 +1,22 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+body {
+  background-color: black;
+}
+
+body h1 {
+  color: white;
+  font-size: 56px;
+}
+
 .all-champs-list {
+  position: relative;
+  left: 100px;
   display: flex;
   flex-wrap: wrap;
   width: 750px;
-  justify-content: space-between;
+  justify-content: center;
   padding: 50px;
 }
 
@@ -15,11 +26,16 @@
 }
 
 .all-champs-list h2 {
-  color: black;
+  color: white;
 }
 
-.all-champs-list li {
-  margin: 10px;
+#filter-buttons {
+  display: flex;
+  color: white;
+}
+
+#buttons-label {
+  font-size: 18px;
 }
 
 .all-champs-list img {
@@ -29,11 +45,12 @@
 }
 
 .all-champs-list img:hover {
-  width: 110px;
+  width: 112px;
   height: auto;
   transition: width 0.5s;
 }
 
-.single-champs-page {
-  z-index: 1;
+.single-champ-page h1 {
+  font-size: 48px;
+  color: white;
 }

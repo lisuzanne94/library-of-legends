@@ -38,7 +38,7 @@ class IndexPage {
         // hidePage() {
         //     this.pageDiv.style.display = "none";
         // }
-    }
+}
 
 export default IndexPage
 

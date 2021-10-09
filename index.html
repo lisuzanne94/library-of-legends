@@ -18,13 +18,37 @@
 </body> -->
 
 <body>
-    <!-- body for index page: -->
+    <h1>Welcome to the Library of Legends</h1>
+
+    <br>
+    <br>
+
+
+    <!-- div for index page: -->
     <div class="index-page">
+        <!-- filtering form -->
+        <div id="filter-buttons">
+            <form>
+                <label id="buttons-label">Filter by tags:
+                    <input type="radio" id="Fighter" name="tag" value="Fighter"><label>Fighter</label>
+                    <input type="radio" id="Tank" name="tag" value="Tank"><label>Tank</label>
+                    <input type="radio" id="Marksman" name="tag" value="Marksman"><label>Marksman</label>
+                    <input type="radio" id="Mage" name="tag" value="Mage"><label>Mage</label>
+                    <input type="radio" id="Assassin" name="tag" value="Assassin"><label>Assassin</label>
+                    <input type="radio" id="Support" name="tag" value="Support"><label>Support</label>
+                </label>
+            </form>
+        </div>
+
         <ul class="all-champs-list"></ul>
     </div>
 
+    <div class="filtered-champs-page">
+        <ul class="filtered-champs-list"></ul>
+    </div>
+
     <!-- div for single champ page: -->
-    <div class="single-champ-page" style="display: none;">
+    <div class="single-champ-page">
         <h1></h1>
         <img></img>
     </div>
