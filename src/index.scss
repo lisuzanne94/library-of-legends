@@ -1,21 +1,19 @@
 // index page css
-// h2 {
-//     color: black;
-// }
+h2 {
+    color: black;
+}
 
-// .champs-list ul {
-//     display: flex;
-//     justify-content: space-between;
-// }
+.all-champs-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-// .champs-list li {
-//     display: inline-block;
-// }
+img {
+    width: 100px;
+    height: auto;
+}
 
-
-// img {
-//     width: 100px;
-//     height: auto;
-// }
+// ****************************************
 
 // single champ page css

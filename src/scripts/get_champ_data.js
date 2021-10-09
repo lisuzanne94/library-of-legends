@@ -6,14 +6,7 @@ const ChampData = {
         return Object.keys(allChampData.data)
     },
 
-    // getAllChampNames () {
-    //     const allNames = [];
-    //     Object.keys(allChampData.data).forEach((champObj) => {
-    //         allNames.push(allChampData.data.champObj.name);
-    //     })
-    //     return allNames;
-    // },
-
+    // getting champ names from champ keys
     getAllChampNames () {
         const allNames = [];
         this.getAllNames().forEach((champObj) => {
@@ -22,10 +15,12 @@ const ChampData = {
         return allNames;
     },
 
-    getChampName (champObj) {
-        return allChampData.data[`${champObj}`].name;
+    // get single champ's name
+    getChampName (champKey) {
+        return allChampData.data[`${champKey}`].name;
     },
 
+    // get champ's loading screen portrait URL
     getChampPortraitURL (champName) {
         return `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champName}_0.jpg`
     }

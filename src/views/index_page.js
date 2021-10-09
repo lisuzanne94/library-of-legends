@@ -1,27 +1,40 @@
 import ChampData from '../scripts/get_champ_data.js'
 
 class IndexPage {
-    constructor(htmlEl) {
-        this.htmlEl = htmlEl;
+    constructor(pageDiv) {
+        this.pageDiv = pageDiv;
         this.renderAllPortraits();
+        this.hidePage.bind(this);
+        this.showPage.bind(this);
     }
 
     // all portraits
-        renderAllPortraits () {
-            const ul = document.querySelector(".champs-list")
-            const allChampKeys = ChampData.getAllChampKeys();
+    renderAllPortraits () {
+        const ul = document.querySelector(".all-champs-list")
+        const allChampKeys = ChampData.getAllChampKeys();
 
-            allChampKeys.forEach((champKey) => {
-                const li = document.createElement("li");
-                const h2 = document.createElement("h2");
-                const img = document.createElement("img");
+        allChampKeys.forEach((champKey) => {
+            const li = document.createElement("li");
+            const h2 = document.createElement("h2");
+            const img = document.createElement("img");
 
-                h2.innerText = ChampData.getChampName(champKey);
-                img.setAttribute("src", ChampData.getChampPortraitURL(champKey));
-                li.append(h2, img);
-                ul.append(li);
-            })
-        }
+            h2.innerText = ChampData.getChampName(champKey);
+            img.setAttribute("id", champKey);
+            img.setAttribute("src", ChampData.getChampPortraitURL(champKey));
+            li.append(h2, img);
+            ul.append(li);
+        })
+    }
+
+    // show page div
+    showPage() {
+        this.pageDiv.style.display = "";
+    }
+
+    // hide page div
+    hidePage() {
+        this.pageDiv.style.display = "none";
+    }
 }
 
 export default IndexPage
