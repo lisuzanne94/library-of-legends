@@ -8,7 +8,7 @@ body h1 {
     font-size: 56px;    
 }
 
-.all-champs-list {
+.all-champs-list, .filtered-champs-list {
     position: relative;
     left: 100px;
     display: flex;
@@ -18,12 +18,12 @@ body h1 {
     padding: 50px;
 }
 
-.all-champs-list figure {
+.all-champs-list figure, .filtered-champs-list figure {
     width: 150px;
     height: 230px;
 }
 
-.all-champs-list h2 {
+.all-champs-list h2, .filtered-champs-list h2 {
     color: white;
 }
 
@@ -40,17 +40,20 @@ body h1 {
 //     margin: 10px;
 // }
 
-.all-champs-list img {
+.all-champs-list img, .filtered-champs-list img {
     width: 100px;
     height: auto;
     transition: width 0.5s;
 }
 
-.all-champs-list img:hover {
+.all-champs-list img:hover, .filtered-champs-list img:hover {
     width: 112px;
     height: auto;
     transition: width 0.5s;
 }
+
+// ****************************************
+//filtered page css
 
 
 // ****************************************

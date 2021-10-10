@@ -1,17 +1,23 @@
 import ChampData from '../scripts/get_champ_data.js'
 
 class IndexPage {
-    constructor(pageDiv) {
-        this.pageDiv = pageDiv;
-        this.renderAllPortraits();
-        // this.hidePage.bind(this);
-        // this.showPage.bind(this);
+    constructor(tag) {
+        const indexPageDiv = document.querySelector(".index-page");
+        this.indexPageDiv = indexPageDiv;
+        this.renderAllPortraits(tag);
     }
 
     // all portraits
-    renderAllPortraits () {
+    renderAllPortraits(tag) {
         const ul = document.querySelector(".all-champs-list")
-        const allChampKeys = ChampData.getAllChampKeys();
+        // console.log(tag)
+        ul.innerHTML = "";
+        // console.log(ul)
+        let allChampKeys = ChampData.getAllChampKeys();
+
+        if (tag) {
+            allChampKeys = ChampData.getFilteredChampKeys(tag);
+        }
 
         allChampKeys.forEach((champKey) => {
             const fig = document.createElement("figure");
@@ -27,17 +33,6 @@ class IndexPage {
             ul.append(fig);
         })
     }
-
-    // maybe useful later? but calling in view.js event handler for now
-        // // show page div
-        // showPage() {
-        //     this.pageDiv.style.display = "";
-        // }
-
-        // // hide page div
-        // hidePage() {
-        //     this.pageDiv.style.display = "none";
-        // }
 }
 
 export default IndexPage
