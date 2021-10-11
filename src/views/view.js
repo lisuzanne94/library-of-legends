@@ -41,11 +41,14 @@ class View {
 
     handleClickOnPortrait(event) {
         const champKey = event.target.id;
+
+        const singleChampDiv = document.querySelector(".single-champ-page");
+        singleChampDiv.style.display = "";
         this.singleChampPage.renderPage(champKey);
 
+        
         // this.index.indexPageDiv.style.display = "none";
-        this.index.indexPageDiv.style.opacity = "0.25";
-        this.filterButtons.remove();
+        // this.index.indexPageDiv.style.opacity = "0.25";
     }
 
 }

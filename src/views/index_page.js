@@ -5,6 +5,9 @@ class IndexPage {
         const indexPageDiv = document.querySelector(".index-page");
         this.indexPageDiv = indexPageDiv;
         this.renderAllPortraits(tag);
+
+        const singleChampDiv = document.querySelector(".single-champ-page");
+        singleChampDiv.style.display = "none";
     }
 
     // all portraits
@@ -14,7 +17,11 @@ class IndexPage {
         let allChampKeys = ChampData.getAllChampKeys();
 
         if (tag) {
-            allChampKeys = ChampData.getFilteredChampKeys(tag);
+            if (tag === "All") {
+                allChampKeys = ChampData.getAllChampKeys();
+            } else {
+                allChampKeys = ChampData.getFilteredChampKeys(tag);
+            }
         }
 
         allChampKeys.forEach((champKey) => {

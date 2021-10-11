@@ -8,7 +8,7 @@ class SingleChampPage {
 
     renderPage(champKey) {
         this.renderHeader(champKey);
-        this.renderPortrait(champKey);
+        this.renderSplashArt(champKey);
         this.renderSpells(champKey);
         this.renderLore(champKey);
     }
@@ -21,17 +21,26 @@ class SingleChampPage {
     }
 
     // rendering portrait
-    renderPortrait(champKey) {
-        const champPortrait = document.querySelector(".champ-details img");
-        champPortrait.innerHTML = "";
-        champPortrait.setAttribute("src", ChampData.getChampPortraitURL(champKey));
+    // renderPortrait(champKey) {
+    //     const champPortrait = document.querySelector(".champ-details img");
+    //     champPortrait.innerHTML = "";
+    //     champPortrait.setAttribute("src", ChampData.getChampPortraitURL(champKey));
+    // }
+
+    // rendering splash art
+    renderSplashArt(champKey) {
+        // const champSplashArt = document.querySelector(".champ-details img");
+        // const single = document.querySelector(".champ-details")
+        // champPortrait.innerHTML = "";
+        // champPortrait.setAttribute("src", ChampData.getChampSplashArtURL(champKey));
+        this.singleChampDiv.style.backgroundImage = `url("${ChampData.getChampSplashArtURL(champKey)}")`;
     }
+
 
     //rendering lore
     renderLore(champKey) {
         const lore = document.querySelector("#champ-lore");
         lore.innerText = ChampData.getChampLore(`${champKey}`);
-        // lore.innerText = "TESTING";
     }
 
     // rendering spells

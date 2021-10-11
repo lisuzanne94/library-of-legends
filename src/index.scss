@@ -1,42 +1,48 @@
 // index page css
 body {
-    background-color: white;
+    background-color: black;
+    margin: 30px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    text-shadow: 2px 2px black;
 }
-.index-page{
+
+.index-page {
     position: absolute;
 }
 
 #main-header {
-    color: black;
+    color: white;
     font-size: 56px;    
 }
 
-.all-champs-list{
+.all-champs-list {
     position: relative;
-    left: 100px;
+    left: -80px;
     display: flex;
     flex-wrap: wrap;
-    width: 750px;
+    width: 600px;
     justify-content: center;
     padding: 50px;
 }
 
 .all-champs-list figure{
-    width: 150px;
+    width: 130px;
     height: 230px;
 }
 
 .all-champs-list h3 {
-    color: black;
+    color: white;
 }
 
 #filter-buttons {
     display: flex;
-    color: black;
+    position: relative;
+    color: white;
 }
 
 #buttons-label {
-    font-size: 18px;
+    font-size: 12px;
 }
 
 
@@ -47,7 +53,7 @@ body {
 }
 
 .all-champs-list img:hover {
-    width: 112px;
+    width: 109px;
     height: auto;
     transition: width 0.5s;
 }
@@ -56,33 +62,40 @@ body {
 
 // single champ page css
 .single-champ-page {
-    position: relative;
-    background-color:rgba(255, 255, 255, 0.5);
+    position: fixed;
+    left: 550px;
+    top: 10px;
+    box-shadow: inset 0px 0px 50px 50px rgb(0, 0, 0);
+    border-radius: 2%;
 }
 
-.single-champ-page:not(h3) {
+.single-champ-page {
     display: flex;
     flex-wrap: wrap;
-    width: 700px;
+    align-content: flex-end;
+    width: 670px;
+    height: 600px;
+    color: white;
+    background-size: cover;
+    background-position-x: right;
 }
+
 
 .single-champ-page h3 {
-    font-size: 48px;
-    color: black;
+    font-size: 24px;
+    margin: 5px;
 }
 
-.champ-details {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
+.champ-details, #champ-spell-list {
+    margin-left: 5px;
 }
 
-.champ-details img {
-    width: 200px;
-    height: auto;
-}
+// .champ-details img {
+//     position: absolute;
+//     width: 300px;
+//     height: auto;
+// }
 
 .single-champ-page #champ-spell-list {
     display: flex;
-    color: black;
 }

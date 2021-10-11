@@ -25,6 +25,10 @@ const ChampData = {
         return `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champKey}_0.jpg`
     },
 
+    getChampSplashArtURL(champKey) {
+        return `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champKey}_0.jpg`
+    },
+
     // get a champ's tags
     getChampTags(champKey) {
         return allChampData.data[`${champKey}`].tags;
@@ -93,6 +97,7 @@ const ChampData = {
 // console.log(allChampData.data["Aatrox"].spells)
 // console.log(ChampData.getChampSpellNames("Aatrox"))
 // console.log(ChampData.getChampSpellDescs("Aatrox"))
+// console.log(ChampData.getChampSplashArtURL("Aatrox"))
 
 export default ChampData;
 
