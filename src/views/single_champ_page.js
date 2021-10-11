@@ -10,23 +10,34 @@ class SingleChampPage {
         this.renderHeader(champKey);
         this.renderPortrait(champKey);
         this.renderSpells(champKey);
+        this.renderLore(champKey);
     }
 
     // rendering header
     renderHeader(champKey) {
         const champNameHeader = document.querySelector(".single-champ-page h3")
+        champNameHeader.innerHTML = "";
         champNameHeader.innerText = `${ChampData.getChampName(champKey)}: ${ChampData.getChampTitle(champKey)}`;
     }
 
     // rendering portrait
     renderPortrait(champKey) {
-        const champPortrait = document.querySelector(".single-champ-page img");
+        const champPortrait = document.querySelector(".champ-details img");
+        champPortrait.innerHTML = "";
         champPortrait.setAttribute("src", ChampData.getChampPortraitURL(champKey));
+    }
+
+    //rendering lore
+    renderLore(champKey) {
+        const lore = document.querySelector("#champ-lore");
+        lore.innerText = ChampData.getChampLore(`${champKey}`);
+        // lore.innerText = "TESTING";
     }
 
     // rendering spells
     renderSpells(champKey) {
         const champSpellList = document.querySelector("#champ-spell-list");
+        champSpellList.innerHTML = "";
         const letters = ["Q", "W", "E", "R"]
         const spellNames = ChampData.getChampSpellNames(`${champKey}`);
         const spellDescs = ChampData.getChampSpellDescs(`${champKey}`);

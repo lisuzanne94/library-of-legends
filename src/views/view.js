@@ -43,7 +43,8 @@ class View {
         const champKey = event.target.id;
         this.singleChampPage.renderPage(champKey);
 
-        this.index.indexPageDiv.style.display = "none";
+        // this.index.indexPageDiv.style.display = "none";
+        this.index.indexPageDiv.style.opacity = "0.25";
         this.filterButtons.remove();
     }
 

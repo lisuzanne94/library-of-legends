@@ -1,14 +1,17 @@
 // index page css
 body {
-    background-color: black;
+    background-color: white;
+}
+.index-page{
+    position: absolute;
 }
 
 #main-header {
-    color: white;
+    color: black;
     font-size: 56px;    
 }
 
-.all-champs-list, .filtered-champs-list {
+.all-champs-list{
     position: relative;
     left: 100px;
     display: flex;
@@ -24,12 +27,12 @@ body {
 }
 
 .all-champs-list h3 {
-    color: white;
+    color: black;
 }
 
 #filter-buttons {
     display: flex;
-    color: white;
+    color: black;
 }
 
 #buttons-label {
@@ -52,11 +55,34 @@ body {
 // ****************************************
 
 // single champ page css
+.single-champ-page {
+    position: relative;
+    background-color:rgba(255, 255, 255, 0.5);
+}
+
+.single-champ-page:not(h3) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+}
+
 .single-champ-page h3 {
     font-size: 48px;
-    color: white;
+    color: black;
+}
+
+.champ-details {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.champ-details img {
+    width: 200px;
+    height: auto;
 }
 
 .single-champ-page #champ-spell-list {
-    color: white;
+    display: flex;
+    color: black;
 }
