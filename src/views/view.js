@@ -33,7 +33,7 @@ class View {
 
     // handles click event to show individual page
     showChampPage() {
-        const champPortraits = document.querySelectorAll(".all-champs-list li")
+        const champPortraits = document.querySelectorAll(".all-champs-list img")
         champPortraits.forEach(portrait => {
             portrait.addEventListener("click", this.handleClickOnPortrait.bind(this))
         });

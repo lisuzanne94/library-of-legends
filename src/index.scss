@@ -3,7 +3,7 @@ body {
     background-color: black;
 }
 
-body h1 {
+#main-header {
     color: white;
     font-size: 56px;    
 }
@@ -18,12 +18,12 @@ body h1 {
     padding: 50px;
 }
 
-.all-champs-list figure, .filtered-champs-list figure {
+.all-champs-list figure{
     width: 150px;
     height: 230px;
 }
 
-.all-champs-list h2, .filtered-champs-list h2 {
+.all-champs-list h3 {
     color: white;
 }
 
@@ -36,30 +36,27 @@ body h1 {
     font-size: 18px;
 }
 
-// .all-champs-list li {
-//     margin: 10px;
-// }
 
-.all-champs-list img, .filtered-champs-list img {
+.all-champs-list img {
     width: 100px;
     height: auto;
     transition: width 0.5s;
 }
 
-.all-champs-list img:hover, .filtered-champs-list img:hover {
+.all-champs-list img:hover {
     width: 112px;
     height: auto;
     transition: width 0.5s;
 }
 
 // ****************************************
-//filtered page css
-
-
-// ****************************************
 
 // single champ page css
-.single-champ-page h1 {
+.single-champ-page h3 {
     font-size: 48px;
+    color: white;
+}
+
+.single-champ-page #champ-spell-list {
     color: white;
 }

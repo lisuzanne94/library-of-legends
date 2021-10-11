@@ -18,33 +18,36 @@
 </body> -->
 
 <body>
-    <h1>Welcome to the Library of Legends</h1>
 
-    
-
-        <!-- filtering form -->
-        <div id="filter-buttons" style="">
-            <form>
-                <label id="buttons-label">Filter by tags:
-                    <input type="radio" id="Fighter" name="tag" value="Fighter"><label>Fighter</label>
-                    <input type="radio" id="Tank" name="tag" value="Tank"><label>Tank</label>
-                    <input type="radio" id="Marksman" name="tag" value="Marksman"><label>Marksman</label>
-                    <input type="radio" id="Mage" name="tag" value="Mage"><label>Mage</label>
-                    <input type="radio" id="Assassin" name="tag" value="Assassin"><label>Assassin</label>
-                    <input type="radio" id="Support" name="tag" value="Support"><label>Support</label>
-                </label>
-            </form>
-        </div>
+        <!-- link to go back to index -->
+        <a href="" id="back-to-index-link">Index</a>
 
     <!-- div for index page: -->
+    <h1 id="main-header">Library of Legends</h1>
+
+    <!-- filtering form -->
+    <div id="filter-buttons" style="">
+        <form>
+            <label id="buttons-label">Filter by tags:
+                <input type="radio" id="Fighter" name="tag" value="Fighter"><label>Fighter</label>
+                <input type="radio" id="Tank" name="tag" value="Tank"><label>Tank</label>
+                <input type="radio" id="Marksman" name="tag" value="Marksman"><label>Marksman</label>
+                <input type="radio" id="Mage" name="tag" value="Mage"><label>Mage</label>
+                <input type="radio" id="Assassin" name="tag" value="Assassin"><label>Assassin</label>
+                <input type="radio" id="Support" name="tag" value="Support"><label>Support</label>
+            </label>
+        </form>
+    </div>
+
     <div class="index-page">
         <ul class="all-champs-list"></ul>
     </div>
 
     <!-- div for single champ page: -->
     <div class="single-champ-page">
-        <h1></h1>
+        <h3></h3>
         <img></img>
+        <ul id="champ-spell-list"></ul>
     </div>
 </body>
 </html>

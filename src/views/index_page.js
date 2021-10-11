@@ -10,9 +10,7 @@ class IndexPage {
     // all portraits
     renderAllPortraits(tag) {
         const ul = document.querySelector(".all-champs-list")
-        // console.log(tag)
         ul.innerHTML = "";
-        // console.log(ul)
         let allChampKeys = ChampData.getAllChampKeys();
 
         if (tag) {
@@ -22,13 +20,13 @@ class IndexPage {
         allChampKeys.forEach((champKey) => {
             const fig = document.createElement("figure");
             const li = document.createElement("li");
-            const h2 = document.createElement("h2");
+            const h3 = document.createElement("h3");
             const img = document.createElement("img");
 
-            h2.innerText = ChampData.getChampName(champKey);
+            h3.innerText = ChampData.getChampName(champKey);
             img.setAttribute("id", champKey);
             img.setAttribute("src", ChampData.getChampPortraitURL(champKey));
-            li.append(h2, img);
+            li.append(h3, img);
             fig.append(li);
             ul.append(fig);
         })
