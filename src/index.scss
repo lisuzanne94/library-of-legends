@@ -118,11 +118,9 @@ input[type="radio"]:nth-of-type(7) {
 .all-champs-list li {
     display: flex;
     flex-direction: column;
-    align-content: center;
 }
 
 .all-champs-list h3 {
-    justify-content: center;
     color: white;
 }
 
@@ -189,48 +187,65 @@ input[type="radio"]:nth-of-type(7) {
     flex-wrap: wrap;
     align-content: space-between;
     width: 620px;
-    height: 540px;
+    height: 500px;
     color: white;
-    background-size: cover;
-    background-position-x: 80%;
+    // background-size: cover;
+    // background-position-x: 80%;
     position: fixed;
     left: 550px;
     top: 20px;
     box-shadow: inset 0px 0px 50px 50px rgb(0, 0, 0);
-    border: solid 20px black;
+    border: solid 25px rgba(0, 0, 0, 0.5);
     border-radius: 10%;
+    overflow: hidden;
+    z-index: 0;
     animation: slide-left 1.5s;
 }
 
-#right-arrow {
+.champ-details #right-arrow, #champ-lore, #champ-spell-list {
+    position: relative;
+    z-index: 1;
+}
+
+#bg-img {
     position: absolute;
+    top: 0px;
+    width: 900px;
+    height: auto;
+    object-position: -200px;
+    z-index: -1;
+}
+
+#right-arrow {
     color: white;
     font-size: 24px;
     left: 600px;
-    bottom: 250px;
+    bottom: 75px;
 }
 
 .single-champ-page h3 {
     font-family: 'Asul', sans-serif;
     font-size: 24px;
-    margin: 5px;
+    margin: 15px;
     color: rgb(255, 255, 255);
     text-shadow: 3px 3px rgb(0, 0, 0);
     animation: slide-left 2s;
 }
 
-// .champ-details, #champ-spell-list {
-//     margin-left: 5px;
-// }
-
 .champ-details #champ-lore {
+    // position: relative;
+    width: 620px;
     font-size: 14px;
+    color: lightgrey;
     background: rgba($color: #000000, $alpha: 0.3);
+    text-align: center;
 }
 
 .single-champ-page #champ-spell-list {
     display: flex;
+    width: 620px;
     font-size: 11px;
+    color: rgb(217, 217, 217);
     background: rgba($color: #000000, $alpha: 0.3);
     // animation: slide-left 2s;
 }
@@ -259,7 +274,7 @@ input[type="radio"]:nth-of-type(7) {
 // }
 
 #champ-spell-list h4 {
-    color: rgb(255, 106, 48);
+    color: rgb(226, 83, 36);
     font-size: 12px;
 }
 
@@ -269,7 +284,7 @@ input[type="radio"]:nth-of-type(7) {
 // }
 
 
-.single-champ-page img {
+.single-champ-page img:not(#bg-img) {
     width: 30px;
     height: auto;
     border: 2px solid black;

@@ -9,6 +9,7 @@ class View {
         this.singleChampPage = new SingleChampPage();
         this.filterButtons = document.querySelector("#filter-buttons");
         this.filteredChampsList = document.querySelector(".filtered-champs-list");
+        this.currentChamp = null;
         this.i = 0;
 
         this.renderIndexPage();
@@ -64,17 +65,25 @@ class View {
 
     handleClickOnPortrait(event) {
         const champKey = event.target.id;
+
+        const bg = document.querySelector("#bg-img");
+        if (bg) { bg.remove() }
+        
         const singleChampDiv = document.querySelector(".single-champ-page");
-        singleChampDiv.remove();
         if (!singleChampDiv) {
             singleChampDiv = document.createElement("div");
             singleChampDiv.classList = ".single-champ-page";
+        } else {
+            singleChampDiv.remove();
         }
+
         document.querySelector("body").append(singleChampDiv)
         const welcome = document.querySelector("#welcome");
         singleChampDiv.style.display = "";
         welcome.innerText = "";
         this.singleChampPage.renderPage(champKey);
+        this.currentChamp = champKey;
+        console.log(this.currentChamp)
         // singleChampDiv.style.animation = "slide-left 2s";
 
         // this.index.indexPageDiv.style.display = "none";
@@ -86,12 +95,34 @@ class View {
         arrow.addEventListener("click", this.handleClickOnArrow.bind(this));
     }
 
+    // handleClickOnArrow() {
+    //     const champKey = this.singleChampPage.singleChampDiv.style.backgroundImage.slice(64).split("_")[0];
+    //     const skinNums = ChampData.getChampSkinNums(champKey);
+    //     const singleChampDiv = this.singleChampPage.singleChampDiv
+    //     // singleChampDiv.removeAttribute("style");
+    //     // singleChampDiv.style.backgroundImage = `url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champKey}_${skinNums[this.i % skinNums.length]}.jpg")`;
+    //     const img = document.createElement("img");
+
+    //     this.incrementCounter();
+    //     // singleChampDiv.style.animation = "fade-in-bg 3s";
+    // }
+
     handleClickOnArrow() {
-        const champKey = this.singleChampPage.singleChampDiv.style.backgroundImage.slice(64).split("_")[0];
-        const skinNums = ChampData.getChampSkinNums(champKey);
+        // const champKey = this.singleChampPage.singleChampDiv.style.backgroundImage.slice(64).split("_")[0];
+        console.log(this.currentChamp);
+        const skinNums = ChampData.getChampSkinNums(this.currentChamp);
         const singleChampDiv = this.singleChampPage.singleChampDiv
+        const champDetails = document.querySelector(".champ-details")
+        let bg = document.querySelector("#bg-img");
+        console.log(bg);
+        bg.remove();
+        // const bg = document.createElement("img");
+        bg = document.createElement("img")
+        bg.setAttribute("id", "bg-img")
+        bg.setAttribute("src", `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.currentChamp}_${skinNums[this.i % skinNums.length]}.jpg`)
         // singleChampDiv.removeAttribute("style");
-        singleChampDiv.style.backgroundImage = `url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champKey}_${skinNums[this.i % skinNums.length]}.jpg")`;
+        // singleChampDiv.style.backgroundImage = `url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champKey}_${skinNums[this.i % skinNums.length]}.jpg")`;
+        champDetails.append(bg);
         this.incrementCounter();
         // singleChampDiv.style.animation = "fade-in-bg 3s";
     }

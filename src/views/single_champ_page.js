@@ -29,18 +29,23 @@ class SingleChampPage {
 
     // rendering splash art
     renderSplashArt(champKey) {
-        // const champSplashArt = document.querySelector(".champ-details img");
-        // const single = document.querySelector(".champ-details")
+        // this.singleChampDiv.style.backgroundImage = `url("${ChampData.getChampSplashArtURL(champKey)}")`;
+        const single = document.querySelector(".champ-details")
+        // if (document.querySelector("#bg-img")) { document.querySelector("#bg-img").innerHTML = "" };
+        // if (champSplashArt) { champSplashArt.innerHTML = ""};
         // champPortrait.innerHTML = "";
         // champPortrait.setAttribute("src", ChampData.getChampSplashArtURL(champKey));
-        this.singleChampDiv.style.backgroundImage = `url("${ChampData.getChampSplashArtURL(champKey)}")`;
+        const bg = document.createElement("img");
+        bg.setAttribute("id", `bg-img`)
+        bg.setAttribute("src", `${ChampData.getChampSplashArtURL(champKey)}`)
+        single.append(bg);
     }
 
 
     //rendering lore
     renderLore(champKey) {
         const lore = document.querySelector("#champ-lore");
-        lore.innerText = ChampData.getChampLore(champKey);
+        lore.innerHTML = ChampData.getChampLore(champKey);
     }
 
     // rendering spells
