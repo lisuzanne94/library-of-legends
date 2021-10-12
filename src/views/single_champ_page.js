@@ -40,7 +40,7 @@ class SingleChampPage {
     //rendering lore
     renderLore(champKey) {
         const lore = document.querySelector("#champ-lore");
-        lore.innerText = ChampData.getChampLore(`${champKey}`);
+        lore.innerText = ChampData.getChampLore(champKey);
     }
 
     // rendering spells
@@ -48,14 +48,20 @@ class SingleChampPage {
         const champSpellList = document.querySelector("#champ-spell-list");
         champSpellList.innerHTML = "";
         const letters = ["Q", "W", "E", "R"]
-        const spellNames = ChampData.getChampSpellNames(`${champKey}`);
-        const spellDescs = ChampData.getChampSpellDescs(`${champKey}`);
+        const spellNames = ChampData.getChampSpellNames(champKey);
+        const spellDescs = ChampData.getChampSpellDescs(champKey);
+        const spellSuffixes = ChampData.getSpellSuffixes(champKey)
 
         for (let i = 0; i < 4; i++) {
             const li = document.createElement("li");
+            const img = document.createElement("img");
             const p = document.createElement("p");
             const br = document.createElement("br");
-            li.innerText = `${letters[i]}: ${spellNames[i]}`;
+
+            img.setAttribute("src", ChampData.getSpellImgURL(spellSuffixes[i]));
+            li.append(img)
+            li.append(br)
+            li.innerHTML += `${letters[i]}: ${spellNames[i]}`;
             p.innerHTML = `${spellDescs[i]}`;
             li.append(p);
             champSpellList.append(li);

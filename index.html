@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asul:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@800&family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+        integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <title>Library Of Legends</title>
@@ -23,12 +29,15 @@
 <body>
 
     <!-- div for index page: -->
-    <h1 id="main-header">Library of Legends</h1>
-
+    <!-- <img src="./src/assets/red-minion.gif"> -->
+    <h1 id="main-header">LIBRARY OF LEGENDS</h1>
+    <!-- <img src="./src/assets/blue-minion.gif"> -->
+    <br>
+    <br>
     <!-- filtering form -->
     <div id="filter-buttons" style="">
         <form>
-            <label id="buttons-label">Filter by tags:
+            <!-- <label id="buttons-label">Filter by tags: -->
                 <br>
                 <input type="radio" id="All" name="tag" value="All"><label>All</label>
                 <input type="radio" id="Fighter" name="tag" value="Fighter"><label>Fighter</label>
@@ -37,13 +46,20 @@
                 <input type="radio" id="Mage" name="tag" value="Mage"><label>Mage</label>
                 <input type="radio" id="Assassin" name="tag" value="Assassin"><label>Assassin</label>
                 <input type="radio" id="Support" name="tag" value="Support"><label>Support</label>
-            </label>
+            <!-- </label> -->
         </form>
     </div>
-
+    <br>
     <div class="index-page">
         <ul class="all-champs-list"></ul>
     </div>
+
+    <div id="welcome"><center>Welcome to the Library of Legends! Select a tag to filter champions by type & click on a champion's portrait to display their details.<br><br>Click the arrow on the champion's page to scroll through their skins.</center>
+    </div>
+
+    <figure>
+        <img src="">
+    </figure>
 
     <!-- div for single champ page:
     <div class="single-champ-page">
@@ -57,6 +73,7 @@
     <div class="single-champ-page">
         <h3></h3>
         <div class="champ-details">
+            <figure id="right-arrow"><i class="fas fa-chevron-right"></i></figure>
             <p id="champ-lore"></p>
             <br>
             <ul id="champ-spell-list"></ul>
