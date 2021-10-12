@@ -110,6 +110,8 @@ class View {
     handleClickOnArrow() {
         // const champKey = this.singleChampPage.singleChampDiv.style.backgroundImage.slice(64).split("_")[0];
         console.log(this.currentChamp);
+        this.incrementCounter();
+        
         const skinNums = ChampData.getChampSkinNums(this.currentChamp);
         const singleChampDiv = this.singleChampPage.singleChampDiv
         const champDetails = document.querySelector(".champ-details")
@@ -123,7 +125,6 @@ class View {
         // singleChampDiv.removeAttribute("style");
         // singleChampDiv.style.backgroundImage = `url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champKey}_${skinNums[this.i % skinNums.length]}.jpg")`;
         champDetails.append(bg);
-        this.incrementCounter();
         // singleChampDiv.style.animation = "fade-in-bg 3s";
     }
 

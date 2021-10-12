@@ -127,9 +127,9 @@ input[type=radio]:nth-of-type(7) {
 }
 
 #welcome {
-  position: relative;
+  position: fixed;
   left: 600px;
-  top: 150px;
+  top: 270px;
   font-family: "Asul", sans-serif;
   font-size: 18px;
   width: 500px;
@@ -152,14 +152,6 @@ input[type=radio]:nth-of-type(7) {
   }
   100% {
     opacity: 1;
-  }
-}
-@keyframes slide-in-bg {
-  0% {
-    background-position: initial;
-  }
-  100% {
-    background-position: left;
   }
 }
 .single-champ-page {
@@ -192,6 +184,7 @@ input[type=radio]:nth-of-type(7) {
   height: auto;
   object-position: -200px;
   z-index: -1;
+  animation: fade-in 2s;
 }
 
 #right-arrow {
