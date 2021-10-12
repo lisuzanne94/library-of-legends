@@ -148,12 +148,20 @@ input[type=radio]:nth-of-type(7) {
     transform: translateX(0px);
   }
 }
-@keyframes fade-in-bg {
+@keyframes fade-in {
   0% {
-    background-position-x: 50%;
+    opacity: 0;
   }
   100% {
-    background-position-x: 100%;
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bg {
+  0% {
+    background-position: initial;
+  }
+  100% {
+    background-position: left;
   }
 }
 .single-champ-page {
@@ -179,13 +187,15 @@ input[type=radio]:nth-of-type(7) {
   color: white;
   font-size: 24px;
   left: 600px;
-  bottom: 300px;
+  bottom: 250px;
 }
 
 .single-champ-page h3 {
   font-family: "Asul", sans-serif;
   font-size: 24px;
   margin: 5px;
+  color: white;
+  text-shadow: 3px 3px black;
   animation: slide-left 2s;
 }
 
@@ -196,9 +206,28 @@ input[type=radio]:nth-of-type(7) {
 
 .single-champ-page #champ-spell-list {
   display: flex;
-  align-content: space-between;
-  font-size: 12px;
+  font-size: 11px;
   background: rgba(0, 0, 0, 0.3);
+}
+
+#champ-spell-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  width: 150px;
+  height: 100px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+#champ-spell-list li::-webkit-scrollbar {
+  display: none;
+}
+
+#champ-spell-list h4 {
+  color: #ff6a30;
+  font-size: 12px;
 }
 
 .single-champ-page img {

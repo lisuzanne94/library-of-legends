@@ -1,7 +1,6 @@
 // index page css
 body {
     background-color: #010a13;
-    // background-color: black;
     background-image: url("../src/assets/CelebrationBg_Arcade_2019.png");
     background-repeat: repeat-x;
     margin: 20px 0px 0px 20px;
@@ -167,15 +166,23 @@ input[type="radio"]:nth-of-type(7) {
     }
 }
 
-@keyframes fade-in-bg {
+@keyframes fade-in {
     0% {
-        background-position-x: 50%;
+        opacity: 0;
     } 
     100% {
-        background-position-x: 100%;
+        opacity: 1;
     }
 }
 
+@keyframes slide-in-bg {
+    0% {
+        background-position: initial;
+    }
+    100% {
+        background-position: left;
+    }
+}
 
 .single-champ-page {
     display: flex;
@@ -200,13 +207,15 @@ input[type="radio"]:nth-of-type(7) {
     color: white;
     font-size: 24px;
     left: 600px;
-    bottom: 300px;
+    bottom: 250px;
 }
 
 .single-champ-page h3 {
     font-family: 'Asul', sans-serif;
     font-size: 24px;
     margin: 5px;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px rgb(0, 0, 0);
     animation: slide-left 2s;
 }
 
@@ -221,11 +230,44 @@ input[type="radio"]:nth-of-type(7) {
 
 .single-champ-page #champ-spell-list {
     display: flex;
-    align-content: space-between;
-    font-size: 12px;
+    font-size: 11px;
     background: rgba($color: #000000, $alpha: 0.3);
     // animation: slide-left 2s;
 }
+
+#champ-spell-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    width: 150px;
+    height: 100px;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+#champ-spell-list li::-webkit-scrollbar {
+    display: none;
+}
+
+// #champ-spell-list p {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     // margin: 3px;
+//     // justify-content: center;
+// }
+
+#champ-spell-list h4 {
+    color: rgb(255, 106, 48);
+    font-size: 12px;
+}
+
+// doesn't work?
+// #champ-spell-list h4 #ult {
+//     color: rgb(115, 0, 0);
+// }
+
 
 .single-champ-page img {
     width: 30px;

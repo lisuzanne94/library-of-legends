@@ -55,14 +55,19 @@ class SingleChampPage {
         for (let i = 0; i < 4; i++) {
             const li = document.createElement("li");
             const img = document.createElement("img");
+            const h4 = document.createElement("h4");
             const p = document.createElement("p");
             const br = document.createElement("br");
 
             img.setAttribute("src", ChampData.getSpellImgURL(spellSuffixes[i]));
             li.append(img)
             li.append(br)
-            li.innerHTML += `${letters[i]}: ${spellNames[i]}`;
-            p.innerHTML = `${spellDescs[i]}`;
+            h4.innerHTML = `${letters[i]}: ${spellNames[i]}`;
+            if (i === 3) { h4.setAttribute("id", "ult") };
+            li.append(h4);
+            // p.innerHTML = `${letters[i]}: ${spellNames[i]}`;
+            // p.append(br);
+            p.innerHTML += `<center>${spellDescs[i]}</center>`;
             li.append(p);
             champSpellList.append(li);
             champSpellList.append(br);
