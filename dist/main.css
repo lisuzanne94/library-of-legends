@@ -16,7 +16,8 @@ header {
   font-family: "Righteous", cursive;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: url("https://media.istockphoto.com/photos/street-scene-with-reflection-and-colorful-neon-signs-at-night-in-picture-id991471688");
+  background-image: url("../src/assets/star-guardian-falling.png");
+  background-position: 60% 70%;
   opacity: 0.8;
 }
 
@@ -37,7 +38,8 @@ a:hover {
 
 body:not(#main-header) {
   background-color: #010a13;
-  background-image: url("../src/assets/CelebrationBg_Arcade_2019.png");
+  background-image: url("../src/assets/StarGuardian19_Celebration_BG.png");
+  background-size: cover;
   background-repeat: no-repeat;
   margin: 20px 0px 0px 20px;
   font-family: "Josefin Sans", sans-serif;
@@ -47,7 +49,7 @@ body:not(#main-header) {
 #filter-buttons {
   display: flex;
   width: 42%;
-  color: #818181;
+  color: rgba(255, 255, 255, 0.766);
   font-size: 13px;
   margin-bottom: 10px;
 }
@@ -62,8 +64,8 @@ input[type=radio]:nth-of-type(1) {
 
 input[type=radio]:nth-of-type(2) {
   -webkit-appearance: none;
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   background-image: url("../src/assets/filter buttons/fighter.png");
   background-size: 100%;
 }
@@ -146,7 +148,7 @@ input[type=radio]:nth-of-type(7) {
 .all-champs-list img {
   width: 90px;
   height: auto;
-  border: 1px solid black;
+  border: 2px solid black;
   transition: width 0.5s;
 }
 
@@ -166,7 +168,7 @@ input[type=radio]:nth-of-type(7) {
   top: 45%;
   font-size: 20px;
   width: 500px;
-  color: rgba(209, 209, 209, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 @keyframes slide-left {
@@ -210,11 +212,11 @@ input[type=radio]:nth-of-type(7) {
 
 #bg-img {
   position: absolute;
-  top: -75px;
+  top: -10%;
+  left: -20%;
   object-fit: contain;
-  width: 150%;
-  height: 150%;
-  object-position: -250px;
+  width: 120%;
+  height: 120%;
   z-index: -1;
   animation: fade-in 1.5s;
 }
@@ -223,7 +225,7 @@ input[type=radio]:nth-of-type(7) {
   position: absolute;
   color: rgba(255, 255, 255, 0.5);
   font-size: 28px;
-  left: 95%;
+  left: 97%;
   bottom: 10%;
   z-index: 3;
 }

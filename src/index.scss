@@ -1,5 +1,4 @@
 // index page css
-
 header {
     display: flex;
     justify-content: space-between;
@@ -9,21 +8,15 @@ header {
     position: relative;
 }
 
-
 #main-header {
-    // display: inline;
     color: rgb(255, 255, 255);
     font-size: 64px;    
     font-family: 'Righteous', cursive;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    // background-image: url("../src/assets/Summoners_Rift_bg.jpeg");
-    background-image: url("https://media.istockphoto.com/photos/street-scene-with-reflection-and-colorful-neon-signs-at-night-in-picture-id991471688");
-    // background-position: top center;
+    background-image: url("../src/assets/star-guardian-falling.png");
+    background-position: 60% 70%;
     opacity: 0.8;
-    // text-shadow: 1px 1px rgb(0, 0, 0);
-    // border: 3px solid rgb(255, 255, 255);
-    // text-decoration: underline;
 }
 
 span {
@@ -43,8 +36,8 @@ a:hover {
 
 body:not(#main-header) {
     background-color: #010a13;
-    background-image: url("../src/assets/CelebrationBg_Arcade_2019.png");
-    // background-size: contain;
+    background-image: url("../src/assets/StarGuardian19_Celebration_BG.png");
+    background-size: cover;
     background-repeat: no-repeat;
     margin:20px 0px 0px 20px;
     font-family: 'Josefin Sans', sans-serif;
@@ -54,13 +47,10 @@ body:not(#main-header) {
 
 #filter-buttons {
     display: flex;
-    // height: 50px;
     width: 42%;
-    color: rgb(129, 129, 129);
+    color: rgba(255, 255, 255, 0.766);
     font-size: 13px;
     margin-bottom: 10px;
-    // margin-top: 50px;
-    // background-color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -75,8 +65,8 @@ input[type="radio"]:nth-of-type(1) {
 
 input[type="radio"]:nth-of-type(2) {
     -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     background-image: url("../src/assets/filter\ buttons/fighter.png");
     background-size: 100%;
 }
@@ -121,26 +111,13 @@ input[type="radio"]:nth-of-type(7) {
     background-size: 95%;
 }
 
-// input[type="radio"]:checked + img {
-//     // position: absolute;
-//     outline: 2px solid black;
-// }
-
-
 .all-champs-list {
     position: relative;
-    // left: -45px;
-    // left: 10px;
     display: flex;
     flex-wrap: wrap;
-    // width: 480px;
-    // height: 400px;
     width: 35%;
     height: 600px;
-    // width: 700px;
-    // height: 500px;
     justify-content: center;
-    // padding: 10px 0px 0px 10px;
     padding: 10px;
     background: rgba($color: #000000, $alpha: 0.5);
     overflow: scroll;
@@ -151,13 +128,10 @@ input[type="radio"]:nth-of-type(7) {
 }
 
 .all-champs-list figure {
-    // width: 130px;
-    // height: 230px;
     display: flex;
     justify-content: center;
     text-align: center;
     width: 100px;
-    // height: 230px;
     height: 200px;
     
 }
@@ -165,7 +139,6 @@ input[type="radio"]:nth-of-type(7) {
 .all-champs-list li {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     align-content: space-around;
     
 }
@@ -179,7 +152,7 @@ input[type="radio"]:nth-of-type(7) {
 .all-champs-list img {
     width: 90px;
     height: auto;
-    border: 1px solid rgb(0, 0, 0);
+    border: 2px solid rgba(0, 0, 0);
     transition: width 0.5s;
 }
 
@@ -194,18 +167,12 @@ input[type="radio"]:nth-of-type(7) {
 }
 
 #welcome {
-    // display: flex;
-    // display: inline-block;
-    // position: relative;
     position: absolute;
     left: 50%;
     top: 45%;
-    // left: 700px;
-    // bottom: 350px;
     font-size: 20px;
     width: 500px;
-    color: rgba(209, 209, 209, 0.8);
-    // text-shadow: 1px 1px black;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 // *****************************************************
@@ -235,25 +202,14 @@ input[type="radio"]:nth-of-type(7) {
 .single-champ-page {
     display: flex;
     position: fixed;
-    // position: relative;
     flex-wrap: wrap;
     align-content: space-between;
     width: 55%;
     height: 75%;
-    // width: 650px;
-    // height: 500px;
     color: white;
-    // background-size: cover;
-    // background-position-x: 80%;
-    // left: 580px;
-    // top: 60px;
-    // left: 650px;
-    // bottom: 600px;
     top: 15%;
     left: 40%;
-    // box-shadow: inset 0px 0px 50px 50px rgb(0, 0, 0);
     border: solid 25px rgba(0, 0, 0, 0.5);
-    // border-radius: 5%;
     overflow: hidden;
     z-index: 0;
     animation: slide-left 1.5s;
@@ -266,13 +222,11 @@ input[type="radio"]:nth-of-type(7) {
 
 #bg-img {
     position: absolute;
-    top: -75px;
-    // width: 100%;
+    top: -10%;
+    left: -20%;
     object-fit: contain;
-    width: 150%;
-    height: 150%;
-    // object-fit: scale-down;
-    object-position: -250px;
+    width: 120%;
+    height: 120%;
     z-index: -1;
     animation: fade-in 1.5s;
 }
@@ -280,11 +234,8 @@ input[type="radio"]:nth-of-type(7) {
 #right-arrow {
     position: absolute;
     color: rgba(255, 255, 255, 0.5);
-    // color: rgb(255, 0, 0);
     font-size: 28px;
-    // left: 600px;
-    // bottom: 75px;
-    left: 95%;
+    left: 97%;
     bottom: 10%;
     z-index: 3;
 }
@@ -302,7 +253,6 @@ input[type="radio"]:nth-of-type(7) {
 }
 
 .champ-details #champ-lore {
-    // position: relative;
     width: 100%;
     font-size: 14px;
     color: lightgrey;
@@ -318,7 +268,6 @@ input[type="radio"]:nth-of-type(7) {
     color: rgb(217, 217, 217);
     background: rgba($color: #000000, $alpha: 0.3);
     text-shadow: 1px 1px black;
-    // animation: slide-left 2s;
 }
 
 #champ-spell-list li {

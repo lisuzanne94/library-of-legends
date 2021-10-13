@@ -16,9 +16,9 @@ League of Legends is an online multiplayer battle arena game in which players ca
 * Webpack to bundle JS code
 
 Static data files:
-* Riot Games/Data Dragon hosted champion data: http://ddragon.leagueoflegends.com/cdn/11.20.1/data/en_US/champion.json
-* Riot Games/Data Dragon hosted champion loading screen image: http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Aatrox_0.jpg
-* Riot Games/Data Dragon hosted individual champion data: http://ddragon.leagueoflegends.com/cdn/11.20.1/data/en_US/champion/Aatrox.json
+* Champion data from Riot Games/Data Dragon: http://ddragon.leagueoflegends.com/cdn/11.20.1/data/en_US/champion.json
+* Champion portraits/splasharts/background from Riot Games/Data Dragon: http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Aatrox_0.jpg
+* Individual champion data from Riot Games/Data Dragon: http://ddragon.leagueoflegends.com/cdn/11.20.1/data/en_US/champion/Aatrox.json
 
 # Implementation Timeline
 * Friday/Weekend

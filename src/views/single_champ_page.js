@@ -20,21 +20,9 @@ class SingleChampPage {
         champNameHeader.innerText = `${ChampData.getChampName(champKey)}: ${ChampData.getChampTitle(champKey)}`;
     }
 
-    // rendering portrait
-    // renderPortrait(champKey) {
-    //     const champPortrait = document.querySelector(".champ-details img");
-    //     champPortrait.innerHTML = "";
-    //     champPortrait.setAttribute("src", ChampData.getChampPortraitURL(champKey));
-    // }
-
     // rendering splash art
     renderSplashArt(champKey) {
-        // this.singleChampDiv.style.backgroundImage = `url("${ChampData.getChampSplashArtURL(champKey)}")`;
         const single = document.querySelector(".champ-details")
-        // if (document.querySelector("#bg-img")) { document.querySelector("#bg-img").innerHTML = "" };
-        // if (champSplashArt) { champSplashArt.innerHTML = ""};
-        // champPortrait.innerHTML = "";
-        // champPortrait.setAttribute("src", ChampData.getChampSplashArtURL(champKey));
         const bg = document.createElement("img");
         bg.setAttribute("id", `bg-img`)
         bg.setAttribute("src", `${ChampData.getChampSplashArtURL(champKey)}`)
@@ -70,8 +58,6 @@ class SingleChampPage {
             h4.innerHTML = `${letters[i]}: ${spellNames[i]}`;
             if (i === 3) { h4.setAttribute("id", "ult") };
             li.append(h4);
-            // p.innerHTML = `${letters[i]}: ${spellNames[i]}`;
-            // p.append(br);
             p.innerHTML += `<center>${spellDescs[i]}</center>`;
             li.append(p);
             champSpellList.append(li);
@@ -81,4 +67,4 @@ class SingleChampPage {
 }
 
 export default SingleChampPage
-// console.log("inside single_champ_page.js")
+
