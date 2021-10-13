@@ -1,24 +1,38 @@
 // index page css
-body {
-    background-color: #010a13;
-    background-image: url("../src/assets/CelebrationBg_Arcade_2019.png");
-    background-repeat: repeat-x;
-    margin: 20px 0px 0px 20px;
-    font-family: 'ABeeZee', sans-serif;
-    font-size: 14px;
-    text-shadow: 1px 1px black;
+
+header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .index-page {
     position: absolute;
 }
 
+span {
+    color: white;
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+body:not(#main-header) {
+    background-color: #010a13;
+    background-image: url("../src/assets/CelebrationBg_Arcade_2019.png");
+    background-repeat: repeat-x;
+    margin:20px 0px 0px 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+}
+
 #filter-buttons {
     display: flex;
     height: 50px;
     width: 510px;
-    color: white;
+    color: rgb(129, 129, 129);
     font-size: 14px;
+    
+    // margin-top: 50px;
+    // background-color: rgba(0, 0, 0, 0.5);
 }
 
 input[type="radio"]:nth-of-type(1) {
@@ -88,10 +102,15 @@ input[type="radio"]:nth-of-type(7) {
 }
 
 #main-header {
-    display: inline;
+    // display: inline;
     color: rgb(255, 255, 255);
-    font-size: 46px;    
-    font-family: 'Asul', sans-serif;
+    font-size: 50px;    
+    font-family: 'Righteous', cursive;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url("../src/assets/Summoners_Rift_bg.jpeg");
+    background-position: top center;
+    // opacity: 0.8;
     // text-shadow: 1px 1px rgb(0, 0, 0);
     // border: 3px solid rgb(255, 255, 255);
     // text-decoration: underline;
@@ -103,25 +122,36 @@ input[type="radio"]:nth-of-type(7) {
     // left: 10px;
     display: flex;
     flex-wrap: wrap;
-    width: 520px;
+    width: 490px;
     justify-content: center;
     // padding: 10px 0px 0px 10px;
     padding: 10px;
-    // background: rgba($color: #3135ff, $alpha: 0.5);
+    background: rgba($color: #000000, $alpha: 0.5);
 }
 
-.all-champs-list figure{
-    width: 130px;
+.all-champs-list figure {
+    // width: 130px;
+    // height: 230px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 120px;
     height: 230px;
+    
 }
 
 .all-champs-list li {
     display: flex;
     flex-direction: column;
+    // justify-content: space-between;
+    align-content: space-between;
+    
 }
 
 .all-champs-list h3 {
-    color: white;
+    color: rgb(168, 168, 168);
+    text-shadow: 1px 1px black;
+    
 }
 
 .all-champs-list img {
@@ -142,12 +172,13 @@ input[type="radio"]:nth-of-type(7) {
     // display: inline-block;
     // position: relative;
     position: fixed;
-    left: 600px;
+    left: 630px;
     top: 270px;
     font-family: 'Asul', sans-serif;
     font-size: 18px;
     width: 500px;
-    color: white;
+    color: rgba(209, 209, 209, 0.745);
+    // text-shadow: 1px 1px black;
 }
 
 // *****************************************************
@@ -176,6 +207,7 @@ input[type="radio"]:nth-of-type(7) {
 
 .single-champ-page {
     display: flex;
+    position: fixed;
     flex-wrap: wrap;
     align-content: space-between;
     width: 620px;
@@ -183,12 +215,11 @@ input[type="radio"]:nth-of-type(7) {
     color: white;
     // background-size: cover;
     // background-position-x: 80%;
-    position: fixed;
-    left: 550px;
-    top: 20px;
-    box-shadow: inset 0px 0px 50px 50px rgb(0, 0, 0);
+    left: 580px;
+    top: 60px;
+    // box-shadow: inset 0px 0px 50px 50px rgb(0, 0, 0);
     border: solid 25px rgba(0, 0, 0, 0.5);
-    border-radius: 10%;
+    // border-radius: 5%;
     overflow: hidden;
     z-index: 0;
     animation: slide-left 1.5s;
@@ -206,7 +237,7 @@ input[type="radio"]:nth-of-type(7) {
     height: auto;
     object-position: -200px;
     z-index: -1;
-    animation: fade-in 2s;
+    animation: fade-in 1.5s;
 }
 
 #right-arrow {
@@ -220,8 +251,8 @@ input[type="radio"]:nth-of-type(7) {
     font-family: 'Asul', sans-serif;
     font-size: 24px;
     margin: 15px;
-    color: rgb(255, 255, 255);
-    text-shadow: 3px 3px rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.841);
+    text-shadow: 1px 1px rgb(0, 0, 0);
     animation: slide-left 2s;
 }
 
@@ -231,15 +262,17 @@ input[type="radio"]:nth-of-type(7) {
     font-size: 14px;
     color: lightgrey;
     background: rgba($color: #000000, $alpha: 0.3);
+        text-shadow: 1px 1px black;
     text-align: center;
 }
 
 .single-champ-page #champ-spell-list {
     display: flex;
     width: 620px;
-    font-size: 11px;
+    font-size: 12px;
     color: rgb(217, 217, 217);
     background: rgba($color: #000000, $alpha: 0.3);
+        text-shadow: 1px 1px black;
     // animation: slide-left 2s;
 }
 
