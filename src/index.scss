@@ -9,10 +9,36 @@ header {
     position: absolute;
 }
 
+
+#main-header {
+    // display: inline;
+    color: rgb(255, 255, 255);
+    font-size: 50px;    
+    font-family: 'Righteous', cursive;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // background-image: url("../src/assets/Summoners_Rift_bg.jpeg");
+    background-image: url("https://media.istockphoto.com/photos/street-scene-with-reflection-and-colorful-neon-signs-at-night-in-picture-id991471688");
+    // background-position: top center;
+    opacity: 0.8;
+    // text-shadow: 1px 1px rgb(0, 0, 0);
+    // border: 3px solid rgb(255, 255, 255);
+    // text-decoration: underline;
+}
+
 span {
     color: white;
     font-size: 32px;
     margin-right: 10px;
+}
+
+a:any-link {
+    color: rgba(255, 255, 255, 0.416);
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
 }
 
 body:not(#main-header) {
@@ -29,27 +55,31 @@ body:not(#main-header) {
     height: 50px;
     width: 510px;
     color: rgb(129, 129, 129);
-    font-size: 14px;
-    
+    font-size: 11px;
+
     // margin-top: 50px;
     // background-color: rgba(0, 0, 0, 0.5);
 }
 
+// #filter-buttons input:hover, label:hover {
+//     color: white;
+// }
+
 input[type="radio"]:nth-of-type(1) {
     -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
-    background-size: 115%;
+    width: 15px;
+    height: 15px;
+    background-size: 100%;
     background-image: url("../src/assets/filter\ buttons/all.png");
 
 }
 
 input[type="radio"]:nth-of-type(2) {
     -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     background-image: url("../src/assets/filter\ buttons/fighter.png");
-    background-size: 130%;
+    background-size: 100%;
 }
 
 input[type="radio"]:nth-of-type(3) {
@@ -72,7 +102,7 @@ input[type="radio"]:nth-of-type(5) {
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
-    background-size: 120%;
+    background-size: 100%;
     background-image: url("../src/assets/filter\ buttons/mage.png");
 }
 
@@ -97,24 +127,6 @@ input[type="radio"]:nth-of-type(7) {
 //     outline: 2px solid black;
 // }
 
-#buttons-label {
-    font-size: 12px;
-}
-
-#main-header {
-    // display: inline;
-    color: rgb(255, 255, 255);
-    font-size: 50px;    
-    font-family: 'Righteous', cursive;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: url("../src/assets/Summoners_Rift_bg.jpeg");
-    background-position: top center;
-    // opacity: 0.8;
-    // text-shadow: 1px 1px rgb(0, 0, 0);
-    // border: 3px solid rgb(255, 255, 255);
-    // text-decoration: underline;
-}
 
 .all-champs-list {
     position: relative;
@@ -122,11 +134,17 @@ input[type="radio"]:nth-of-type(7) {
     // left: 10px;
     display: flex;
     flex-wrap: wrap;
-    width: 490px;
+    width: 480px;
+    height: 400px;
     justify-content: center;
     // padding: 10px 0px 0px 10px;
     padding: 10px;
     background: rgba($color: #000000, $alpha: 0.5);
+    overflow: scroll;
+}
+
+.all-champs-list::-webkit-scrollbar {
+    display: none;
 }
 
 .all-champs-list figure {
@@ -161,10 +179,14 @@ input[type="radio"]:nth-of-type(7) {
     transition: width 0.5s;
 }
 
-.all-champs-list img:hover {
+.all-champs-list img:hover{
     width: 109px;
     height: auto;
     transition: width 0.5s;
+}
+
+.all-champs-list figure:hover h3 {
+    color: white;
 }
 
 #welcome {
@@ -174,10 +196,9 @@ input[type="radio"]:nth-of-type(7) {
     position: fixed;
     left: 630px;
     top: 270px;
-    font-family: 'Asul', sans-serif;
     font-size: 18px;
     width: 500px;
-    color: rgba(209, 209, 209, 0.745);
+    color: rgba(209, 209, 209, 0.8);
     // text-shadow: 1px 1px black;
 }
 
@@ -188,7 +209,7 @@ input[type="radio"]:nth-of-type(7) {
 @keyframes slide-left {
     0% {
         opacity: 0;
-        transform: translateX(200px);
+        transform: translateX(30px);
     }
     100% {
         opacity: 1;
@@ -208,15 +229,18 @@ input[type="radio"]:nth-of-type(7) {
 .single-champ-page {
     display: flex;
     position: fixed;
+    // position: absolute;
     flex-wrap: wrap;
     align-content: space-between;
-    width: 620px;
-    height: 500px;
+    width: 600px;
+    height: 480px;
     color: white;
     // background-size: cover;
     // background-position-x: 80%;
-    left: 580px;
-    top: 60px;
+    // left: 580px;
+    // top: 60px;
+    left: 575px;
+    bottom: 30px;
     // box-shadow: inset 0px 0px 50px 50px rgb(0, 0, 0);
     border: solid 25px rgba(0, 0, 0, 0.5);
     // border-radius: 5%;
@@ -241,38 +265,43 @@ input[type="radio"]:nth-of-type(7) {
 }
 
 #right-arrow {
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
     font-size: 24px;
-    left: 600px;
-    bottom: 75px;
+    // left: 600px;
+    // bottom: 75px;
+    left: 580px;
+    bottom: 30px;
+}
+
+#right-arrow:hover {
+    color: white;
 }
 
 .single-champ-page h3 {
-    font-family: 'Asul', sans-serif;
     font-size: 24px;
     margin: 15px;
-    color: rgba(255, 255, 255, 0.841);
+    color: rgba(255, 255, 255, 0.8);
     text-shadow: 1px 1px rgb(0, 0, 0);
     animation: slide-left 2s;
 }
 
 .champ-details #champ-lore {
     // position: relative;
-    width: 620px;
+    width: 600px;
     font-size: 14px;
     color: lightgrey;
     background: rgba($color: #000000, $alpha: 0.3);
-        text-shadow: 1px 1px black;
+    text-shadow: 1px 1px black;
     text-align: center;
 }
 
 .single-champ-page #champ-spell-list {
     display: flex;
-    width: 620px;
+    width: 600px;
     font-size: 12px;
     color: rgb(217, 217, 217);
     background: rgba($color: #000000, $alpha: 0.3);
-        text-shadow: 1px 1px black;
+    text-shadow: 1px 1px black;
     // animation: slide-left 2s;
 }
 

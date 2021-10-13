@@ -22,14 +22,12 @@ Static data files:
 
 # Implementation Timeline
 * Friday/Weekend
-    - Understanding how to use data from API
-    - Code data retrieval from API
+    - Understanding/coding data retrieval
     - Set up webpack
     - Map out project structure
     - Create project skeleton
 * Monday
     - Code basic structures of index view and individual champion view
-    - Render in API data
     - Code in user interaction events
 * Tuesday
     - Write out CSS and style all views
@@ -41,8 +39,7 @@ Static data files:
     - Deploy to GitHub
 
 # Bonus Features
-* Background music that the user can mute
-* Audio that plays when an individual champion's profile is brought up
+* Addition of all available champion skins
 
 
 
