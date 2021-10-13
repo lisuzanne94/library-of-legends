@@ -1,3 +1,285 @@
-header{display:flex;justify-content:space-between}.index-page{position:absolute}#main-header{color:#fff;font-size:50px;font-family:"Righteous",cursive;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-image:url("https://media.istockphoto.com/photos/street-scene-with-reflection-and-colorful-neon-signs-at-night-in-picture-id991471688");opacity:.8}span{color:#fff;font-size:32px;margin-right:10px}a:any-link{color:rgba(255,255,255,.416);text-decoration:none}a:hover{color:#fff}body:not(#main-header){background-color:#010a13;background-image:url("../src/assets/CelebrationBg_Arcade_2019.png");background-repeat:repeat-x;margin:20px 0px 0px 20px;font-family:"Josefin Sans",sans-serif;font-size:14px}#filter-buttons{display:flex;height:50px;width:510px;color:#818181;font-size:11px}input[type=radio]:nth-of-type(1){-webkit-appearance:none;width:15px;height:15px;background-size:100%;background-image:url("../src/assets/filter buttons/all.png")}input[type=radio]:nth-of-type(2){-webkit-appearance:none;width:15px;height:15px;background-image:url("../src/assets/filter buttons/fighter.png");background-size:100%}input[type=radio]:nth-of-type(3){-webkit-appearance:none;width:15px;height:15px;background-size:100%;background-image:url("../src/assets/filter buttons/tank.png")}input[type=radio]:nth-of-type(4){-webkit-appearance:none;width:15px;height:15px;background-size:100%;background-image:url("../src/assets/filter buttons/marksman.png")}input[type=radio]:nth-of-type(5){-webkit-appearance:none;width:15px;height:15px;background-size:100%;background-image:url("../src/assets/filter buttons/mage.png")}input[type=radio]:nth-of-type(6){-webkit-appearance:none;width:15px;height:15px;background-size:95%;background-image:url("../src/assets/filter buttons/assassin.png")}input[type=radio]:nth-of-type(7){-webkit-appearance:none;width:15px;height:15px;background-image:url("../src/assets/filter buttons/support.png");background-size:95%}.all-champs-list{position:relative;display:flex;flex-wrap:wrap;width:480px;height:400px;justify-content:center;padding:10px;background:rgba(0,0,0,.5);overflow:scroll}.all-champs-list::-webkit-scrollbar{display:none}.all-champs-list figure{display:flex;justify-content:space-around;text-align:center;width:120px;height:230px}.all-champs-list li{display:flex;flex-direction:column;align-content:space-between}.all-champs-list h3{color:#a8a8a8;text-shadow:1px 1px #000}.all-champs-list img{width:100px;height:auto;border:1px solid #000;transition:width .5s}.all-champs-list img:hover{width:109px;height:auto;transition:width .5s}.all-champs-list figure:hover h3{color:#fff}#welcome{position:fixed;left:630px;top:270px;font-size:18px;width:500px;color:rgba(209,209,209,.8)}@keyframes slide-left{0%{opacity:0;transform:translateX(30px)}100%{opacity:1;transform:translateX(0px)}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}.single-champ-page{display:flex;position:fixed;flex-wrap:wrap;align-content:space-between;width:600px;height:480px;color:#fff;left:575px;bottom:30px;border:solid 25px rgba(0,0,0,.5);overflow:hidden;z-index:0;animation:slide-left 1.5s}.champ-details #right-arrow,#champ-lore,#champ-spell-list{position:relative;z-index:1}#bg-img{position:absolute;top:0px;width:900px;height:auto;object-position:-200px;z-index:-1;animation:fade-in 1.5s}#right-arrow{color:rgba(255,255,255,.5);font-size:24px;left:580px;bottom:30px}#right-arrow:hover{color:#fff}.single-champ-page h3{font-size:24px;margin:15px;color:rgba(255,255,255,.8);text-shadow:1px 1px #000;animation:slide-left 2s}.champ-details #champ-lore{width:600px;font-size:14px;color:#d3d3d3;background:rgba(0,0,0,.3);text-shadow:1px 1px #000;text-align:center}.single-champ-page #champ-spell-list{display:flex;width:600px;font-size:12px;color:#d9d9d9;background:rgba(0,0,0,.3);text-shadow:1px 1px #000}#champ-spell-list li{display:flex;flex-direction:column;align-items:center;margin:5px;width:150px;height:100px;overflow:scroll;scrollbar-width:none}#champ-spell-list li::-webkit-scrollbar{display:none}#champ-spell-list h4{color:#e25324;font-size:12px}.single-champ-page img:not(#bg-img){width:30px;height:auto;border:2px solid #000}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+header {
+  display: flex;
+  justify-content: space-between;
+}
 
-/*# sourceMappingURL=main.css.map*/
+.index-page {
+  position: relative;
+}
+
+#main-header {
+  color: white;
+  font-size: 64px;
+  font-family: "Righteous", cursive;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url("https://media.istockphoto.com/photos/street-scene-with-reflection-and-colorful-neon-signs-at-night-in-picture-id991471688");
+  opacity: 0.8;
+}
+
+span {
+  color: white;
+  font-size: 32px;
+  margin-right: 10px;
+}
+
+a:any-link {
+  color: rgba(255, 255, 255, 0.416);
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+body:not(#main-header) {
+  background-color: #010a13;
+  background-image: url("../src/assets/CelebrationBg_Arcade_2019.png");
+  background-repeat: no-repeat;
+  margin: 20px 0px 0px 20px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
+
+#filter-buttons {
+  display: flex;
+  width: 42%;
+  color: #818181;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+input[type=radio]:nth-of-type(1) {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-size: 100%;
+  background-image: url("../src/assets/filter buttons/all.png");
+}
+
+input[type=radio]:nth-of-type(2) {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-image: url("../src/assets/filter buttons/fighter.png");
+  background-size: 100%;
+}
+
+input[type=radio]:nth-of-type(3) {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-size: 100%;
+  background-image: url("../src/assets/filter buttons/tank.png");
+}
+
+input[type=radio]:nth-of-type(4) {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-size: 100%;
+  background-image: url("../src/assets/filter buttons/marksman.png");
+}
+
+input[type=radio]:nth-of-type(5) {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-size: 100%;
+  background-image: url("../src/assets/filter buttons/mage.png");
+}
+
+input[type=radio]:nth-of-type(6) {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-size: 95%;
+  background-image: url("../src/assets/filter buttons/assassin.png");
+}
+
+input[type=radio]:nth-of-type(7) {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-image: url("../src/assets/filter buttons/support.png");
+  background-size: 95%;
+}
+
+.all-champs-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 35%;
+  height: 600px;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+}
+
+.all-champs-list::-webkit-scrollbar {
+  display: none;
+}
+
+.all-champs-list figure {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100px;
+  height: 200px;
+}
+
+.all-champs-list li {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.all-champs-list h3 {
+  color: #a8a8a8;
+  text-shadow: 1px 1px black;
+}
+
+.all-champs-list img {
+  width: 90px;
+  height: auto;
+  border: 1px solid black;
+  transition: width 0.5s;
+}
+
+.all-champs-list img:hover {
+  width: 100px;
+  height: auto;
+  transition: width 0.5s;
+}
+
+.all-champs-list figure:hover h3 {
+  color: white;
+}
+
+#welcome {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  font-size: 20px;
+  width: 500px;
+  color: rgba(209, 209, 209, 0.8);
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.single-champ-page {
+  display: flex;
+  position: fixed;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 55%;
+  height: 75%;
+  color: white;
+  top: 15%;
+  left: 40%;
+  border: solid 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 0;
+  animation: slide-left 1.5s;
+}
+
+.champ-details #right-arrow, #champ-lore, #champ-spell-list {
+  position: relative;
+  z-index: 1;
+}
+
+#bg-img {
+  position: absolute;
+  top: -75px;
+  object-fit: contain;
+  width: 150%;
+  height: 150%;
+  object-position: -250px;
+  z-index: -1;
+  animation: fade-in 1.5s;
+}
+
+#right-arrow {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+  left: 95%;
+  bottom: 10%;
+  z-index: 3;
+}
+
+#right-arrow:hover {
+  color: white;
+}
+
+.single-champ-page h3 {
+  font-size: 28px;
+  margin: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px black;
+  animation: slide-left 2s;
+}
+
+.champ-details #champ-lore {
+  width: 100%;
+  font-size: 14px;
+  color: lightgrey;
+  background: rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
+
+.single-champ-page #champ-spell-list {
+  display: flex;
+  width: 100%;
+  font-size: 13px;
+  color: #d9d9d9;
+  background: rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px black;
+}
+
+#champ-spell-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  width: 100%;
+  height: 100px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+#champ-spell-list li::-webkit-scrollbar {
+  display: none;
+}
+
+#champ-spell-list h4 {
+  color: #e25324;
+  font-size: 13px;
+}
+
+.single-champ-page img:not(#bg-img) {
+  width: 30px;
+  height: auto;
+  border: 2px solid black;
+}
