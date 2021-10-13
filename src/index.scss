@@ -39,9 +39,9 @@ body:not(#main-header) {
     background-image: url("../src/assets/StarGuardian19_Celebration_BG.png");
     background-size: cover;
     background-repeat: no-repeat;
-    margin:20px 0px 0px 20px;
+    margin: 20px 0px 0px 20px;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 
@@ -49,7 +49,7 @@ body:not(#main-header) {
     display: flex;
     width: 42%;
     color: rgba(255, 255, 255, 0.766);
-    font-size: 13px;
+    font-size: 0.75em;
     margin-bottom: 10px;
 }
 
@@ -245,7 +245,7 @@ input[type="radio"]:nth-of-type(7) {
 }
 
 .single-champ-page h3 {
-    font-size: 28px;
+    font-size: 2em;
     margin: 15px;
     color: rgba(255, 255, 255, 0.8);
     text-shadow: 1px 1px rgb(0, 0, 0);
@@ -254,7 +254,7 @@ input[type="radio"]:nth-of-type(7) {
 
 .champ-details #champ-lore {
     width: 100%;
-    font-size: 14px;
+    font-size: 1em;
     color: lightgrey;
     background: rgba($color: #000000, $alpha: 0.3);
     text-shadow: 1px 1px black;
@@ -264,7 +264,7 @@ input[type="radio"]:nth-of-type(7) {
 .single-champ-page #champ-spell-list {
     display: flex;
     width: 100%;
-    font-size: 13px;
+    font-size: 1em;
     color: rgb(217, 217, 217);
     background: rgba($color: #000000, $alpha: 0.3);
     text-shadow: 1px 1px black;
