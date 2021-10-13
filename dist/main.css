@@ -115,7 +115,7 @@ input[type=radio]:nth-of-type(7) {
   display: flex;
   flex-wrap: wrap;
   width: 35%;
-  height: 600px;
+  height: 800px;
   justify-content: center;
   padding: 10px;
   background: rgba(0, 0, 0, 0.5);
@@ -284,4 +284,10 @@ input[type=radio]:nth-of-type(7) {
   width: 30px;
   height: auto;
   border: 2px solid black;
+}
+
+@media only screen and (max-height: 800px) {
+  .all-champs-list {
+    height: 600px;
+  }
 }
