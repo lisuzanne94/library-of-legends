@@ -14,8 +14,6 @@ header {
     font-family: 'Staatliches', cursive;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    // background-image: url("../src/assets/star-guardian-falling.png");
-    // background-position: 60% 70%;
     background-image: url("../src/assets/night-light-background-bokeh-blur-600w-1850702212.webp");
     background-position: 90% 90%;
     opacity: 0.9;
@@ -62,7 +60,6 @@ input[type="radio"]:nth-of-type(1) {
     height: 15px;
     background-size: 100%;
     background-image: url("../src/assets/filter\ buttons/all.png");
-
 }
 
 input[type="radio"]:nth-of-type(2) {
@@ -143,13 +140,12 @@ input[type="radio"]:nth-of-type(7) {
     display: flex;
     flex-direction: column;
     align-content: space-around;
-    
 }
 
 .all-champs-list h3 {
     color: rgb(168, 168, 168);
     text-shadow: 1px 1px black;
-    
+    font-size: 20px;
 }
 
 .all-champs-list img {
@@ -171,9 +167,9 @@ input[type="radio"]:nth-of-type(7) {
 
 #welcome {
     position: absolute;
-    left: 50%;
-    top: 45%;
-    font-size: 20px;
+    left: 55%;
+    top: 40%;
+    font-size: 30px;
     width: 500px;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -290,7 +286,7 @@ input[type="radio"]:nth-of-type(7) {
 
 #champ-spell-list h4 {
     color: rgb(226, 83, 36);
-    font-size: 13px;
+    font-size: 24px;
 }
 
 .single-champ-page img:not(#bg-img) {
@@ -311,6 +307,10 @@ input[type="radio"]:nth-of-type(7) {
 
     .all-champs-list {
         height: 750px;
+    }
+
+    .all-champs-list h3 {
+        font-size: 14px;
     }
 
     .single-champ-page {
@@ -339,9 +339,25 @@ input[type="radio"]:nth-of-type(7) {
     .single-champ-page h3 {
         font-size: 24px;
     }
+
+    #welcome {
+        left: 50%;
+        top: 40%;
+        font-size: 20px;
+    }
+
+    #champ-spell-list h4 {
+        color: rgb(226, 83, 36);
+        font-size: 13px;
+    }
+
 }
 
 @media only screen and (max-height: 800px) {
+    .all-champs-list h3 {
+        font-size: 14px;
+    }
+
     #filter-buttons {
         font-size: 13px;
     }
