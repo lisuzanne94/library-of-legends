@@ -12,7 +12,7 @@ header {
 
 #main-header {
   color: white;
-  font-size: 72px;
+  font-size: 84px;
   font-family: "Staatliches", cursive;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -47,9 +47,10 @@ body:not(#main-header) {
 
 #filter-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  width: 35%;
   color: rgba(255, 255, 255, 0.766);
-  font-size: 16px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
@@ -291,7 +292,7 @@ input[type=radio]:nth-of-type(7) {
   }
 
   #filter-buttons {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .all-champs-list {
@@ -327,7 +328,7 @@ input[type=radio]:nth-of-type(7) {
 }
 @media only screen and (max-height: 800px) {
   #filter-buttons {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .all-champs-list {
