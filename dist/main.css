@@ -12,7 +12,7 @@ header {
 
 #main-header {
   color: white;
-  font-size: 64px;
+  font-size: 84px;
   font-family: "Righteous", cursive;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -48,9 +48,10 @@ body:not(#main-header) {
 
 #filter-buttons {
   display: flex;
-  width: 42%;
+  justify-content: flex-end;
+  width: 35%;
   color: rgba(255, 255, 255, 0.766);
-  font-size: 0.75em;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
@@ -115,7 +116,7 @@ input[type=radio]:nth-of-type(7) {
   display: flex;
   flex-wrap: wrap;
   width: 35%;
-  height: 800px;
+  height: 1000px;
   justify-content: center;
   padding: 10px;
   background: rgba(0, 0, 0, 0.5);
@@ -197,7 +198,7 @@ input[type=radio]:nth-of-type(7) {
   width: 55%;
   height: 75%;
   color: white;
-  top: 15%;
+  top: 10%;
   left: 40%;
   border: solid 25px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -205,18 +206,18 @@ input[type=radio]:nth-of-type(7) {
   animation: slide-left 1.5s;
 }
 
-.champ-details #right-arrow, #champ-lore, #champ-spell-list {
+.champ-details #champ-lore, #champ-spell-list {
   position: relative;
   z-index: 1;
 }
 
 #bg-img {
   position: absolute;
-  top: -10%;
+  top: -20%;
   left: -20%;
   object-fit: contain;
-  width: 120%;
-  height: 120%;
+  width: 130%;
+  height: 130%;
   z-index: -1;
   animation: fade-in 1.5s;
 }
@@ -226,7 +227,7 @@ input[type=radio]:nth-of-type(7) {
   color: rgba(255, 255, 255, 0.5);
   font-size: 28px;
   left: 97%;
-  bottom: 10%;
+  bottom: 50%;
   z-index: 3;
 }
 
@@ -235,7 +236,7 @@ input[type=radio]:nth-of-type(7) {
 }
 
 .single-champ-page h3 {
-  font-size: 2em;
+  font-size: 48px;
   margin: 15px;
   color: rgba(255, 255, 255, 0.8);
   text-shadow: 1px 1px black;
@@ -244,7 +245,7 @@ input[type=radio]:nth-of-type(7) {
 
 .champ-details #champ-lore {
   width: 100%;
-  font-size: 1em;
+  font-size: 28px;
   color: lightgrey;
   background: rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px black;
@@ -254,7 +255,7 @@ input[type=radio]:nth-of-type(7) {
 .single-champ-page #champ-spell-list {
   display: flex;
   width: 100%;
-  font-size: 1em;
+  font-size: 24px;
   color: #d9d9d9;
   background: rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px black;
@@ -266,7 +267,7 @@ input[type=radio]:nth-of-type(7) {
   align-items: center;
   margin: 5px;
   width: 100%;
-  height: 100px;
+  height: 150px;
   overflow: scroll;
   scrollbar-width: none;
 }
@@ -286,8 +287,71 @@ input[type=radio]:nth-of-type(7) {
   border: 2px solid black;
 }
 
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 1080px) {
+  #main-header {
+    font-size: 64px;
+  }
+
+  #filter-buttons {
+    font-size: 18px;
+  }
+
   .all-champs-list {
-    height: 600px;
+    height: 750px;
+  }
+
+  .single-champ-page {
+    top: 15%;
+  }
+
+  .single-champ-page #champ-lore {
+    font-size: 24px;
+  }
+
+  .single-champ-page #champ-spell-list {
+    font-size: 20px;
+  }
+
+  #champ-spell-list li {
+    height: 120px;
+  }
+
+  #bg-img {
+    top: -15%;
+    left: -20%;
+    width: 120%;
+    height: 120%;
+  }
+
+  .single-champ-page h3 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-height: 800px) {
+  #filter-buttons {
+    font-size: 11px;
+  }
+
+  .all-champs-list {
+    height: 400px;
+  }
+
+  .single-champ-page #champ-lore {
+    font-size: 15px;
+  }
+
+  .single-champ-page #champ-spell-list {
+    font-size: 13px;
+  }
+
+  #champ-spell-list li {
+    height: 100px;
+  }
+
+  #bg-img {
+    top: -10%;
+    left: -20%;
+    width: 120%;
+    height: 120%;
   }
 }
