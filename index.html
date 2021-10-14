@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
         integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="./dist/main.css" />
@@ -23,27 +24,32 @@
 
     <header>
         <h1 id="main-header">LIBRARY OF LEGENDS</h1>
+
+        <!-- filtering form -->
+        <div id="filter-buttons" style="">
+            <form>
+                <br>
+                <input type="radio" id="All" name="tag" value="All"><label>All</label>
+                <input type="radio" id="Fighter" name="tag" value="Fighter"><label>Fighter</label>
+                <input type="radio" id="Tank" name="tag" value="Tank"><label>Tank</label>
+                <input type="radio" id="Mage" name="tag" value="Mage"><label>Mage</label>
+                <!-- <br> -->
+                <input type="radio" id="Marksman" name="tag" value="Marksman"><label>Marksman</label>
+                <!-- <center> -->
+                <input type="radio" id="Assassin" name="tag" value="Assassin"><label>Assassin</label>
+                <input type="radio" id="Support" name="tag" value="Support"><label>Support</label>
+            </form>
+        </div>
+
         <span>
             <a href="https://github.com/lisuzanne94" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/suzanne-li-080036161" target="_blank"><i class="fab fa-linkedin"></i></a>
         </span>
 
     </header>
     <br>
     <br>
-    <!-- filtering form -->
-    <div id="filter-buttons" style="">
-        <form>
-                <br>
-                <input type="radio" id="All" name="tag" value="All"><label>All</label>
-                <input type="radio" id="Fighter" name="tag" value="Fighter"><label>Fighter</label>
-                <input type="radio" id="Tank" name="tag" value="Tank"><label>Tank</label>
-                <input type="radio" id="Marksman" name="tag" value="Marksman"><label>Marksman</label>
-                <input type="radio" id="Mage" name="tag" value="Mage"><label>Mage</label>
-                <input type="radio" id="Assassin" name="tag" value="Assassin"><label>Assassin</label>
-                <input type="radio" id="Support" name="tag" value="Support"><label>Support</label>
-        </form>
-    </div>
+
+    <br>
 
     <div class="index-page">
         <ul class="all-champs-list"></ul>

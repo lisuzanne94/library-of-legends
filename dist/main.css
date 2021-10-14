@@ -12,13 +12,13 @@ header {
 
 #main-header {
   color: white;
-  font-size: 84px;
-  font-family: "Righteous", cursive;
+  font-size: 72px;
+  font-family: "Staatliches", cursive;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: url("../src/assets/star-guardian-falling.png");
-  background-position: 60% 70%;
-  opacity: 0.8;
+  background-image: url("../src/assets/night-light-background-bokeh-blur-600w-1850702212.webp");
+  background-position: 90% 90%;
+  opacity: 0.9;
 }
 
 span {
@@ -42,14 +42,12 @@ body:not(#main-header) {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 20px 0px 0px 20px;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1em;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 #filter-buttons {
   display: flex;
-  justify-content: flex-end;
-  width: 35%;
+  justify-content: center;
   color: rgba(255, 255, 255, 0.766);
   font-size: 16px;
   margin-bottom: 10px;
@@ -84,7 +82,7 @@ input[type=radio]:nth-of-type(4) {
   width: 15px;
   height: 15px;
   background-size: 100%;
-  background-image: url("../src/assets/filter buttons/marksman.png");
+  background-image: url("../src/assets/filter buttons/mage.png");
 }
 
 input[type=radio]:nth-of-type(5) {
@@ -92,7 +90,7 @@ input[type=radio]:nth-of-type(5) {
   width: 15px;
   height: 15px;
   background-size: 100%;
-  background-image: url("../src/assets/filter buttons/mage.png");
+  background-image: url("../src/assets/filter buttons/marksman.png");
 }
 
 input[type=radio]:nth-of-type(6) {
@@ -329,7 +327,7 @@ input[type=radio]:nth-of-type(7) {
 }
 @media only screen and (max-height: 800px) {
   #filter-buttons {
-    font-size: 11px;
+    font-size: 15px;
   }
 
   .all-champs-list {
