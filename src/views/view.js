@@ -16,8 +16,8 @@ class View {
 
         this.renderIndexPage();
         this.showFilteredChamps();
-        this.switchSkin()
-
+        this.switchNextSkin()
+        this.switchPrevSkin()
     }
 
     renderIndexPage(tag) {
@@ -67,12 +67,17 @@ class View {
         this.currentChamp = champKey;
     }
 
-    switchSkin() {
-        const arrow = document.querySelector("#right-arrow");
-        arrow.addEventListener("click", this.handleClickOnArrow.bind(this));
+    switchNextSkin() {
+        const rightArrow = document.querySelector("#right-arrow");
+        rightArrow.addEventListener("click", this.handleClickOnRightArrow.bind(this));
     }
 
-    handleClickOnArrow() {
+    switchPrevSkin() {
+        const leftArrow = document.querySelector("#left-arrow");
+        leftArrow.addEventListener("click", this.handleClickOnLeftArrow.bind(this));
+    }
+
+    handleClickOnRightArrow() {
         this.incrementCounter();
         const skinNums = ChampData.getChampSkinNums(this.currentChamp);
         // const singleChampDiv = this.singleChampPage.singleChampDiv
@@ -81,9 +86,30 @@ class View {
         bg.remove();
         bg = document.createElement("img")
         bg.setAttribute("id", "bg-img")
-        bg.setAttribute("src", `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.currentChamp}_${skinNums[this.i % skinNums.length]}.jpg`)
+        bg.setAttribute("src", `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.currentChamp}_${skinNums[Math.abs(this.i % skinNums.length)]}.jpg`)
         champDetails.append(bg);
+    }
 
+    handleClickOnLeftArrow() {
+        const skinNums = ChampData.getChampSkinNums(this.currentChamp);
+
+        if (this.i <= 0) {
+            this.i = skinNums.length;
+        }
+        this.decrementCounter();
+
+        const champDetails = document.querySelector(".champ-details")
+        let bg = document.querySelector("#bg-img");
+        bg.remove();
+        bg = document.createElement("img")
+        bg.setAttribute("id", "bg-img")
+        bg.setAttribute("src", `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.currentChamp}_${skinNums[Math.abs(this.i % skinNums.length)]}.jpg`)
+        // console.log(this.i)
+        champDetails.append(bg);
+    }
+
+    decrementCounter() {
+        this.i--;
     }
 
     incrementCounter() {
