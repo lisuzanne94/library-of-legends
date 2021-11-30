@@ -12,9 +12,9 @@ header {
     color: rgb(255, 255, 255);
     font-size: 84px;    
     font-family: 'Staatliches', cursive;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: url("../src/assets/night-light-background-bokeh-blur-600w-1850702212.webp");
+    -webkit-background-clip: text;
     background-position: 90% 90%;
     opacity: 0.9;
 }
@@ -58,8 +58,12 @@ input[type="radio"]:nth-of-type(1) {
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
-    background-size: 100%;
+    background-size: 125%;
     background-image: url("../src/assets/filter\ buttons/all.png");
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 input[type="radio"]:nth-of-type(2) {
@@ -67,7 +71,11 @@ input[type="radio"]:nth-of-type(2) {
     width: 18px;
     height: 18px;
     background-image: url("../src/assets/filter\ buttons/fighter.png");
-    background-size: 100%;
+    background-size: 125%;
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 input[type="radio"]:nth-of-type(3) {
@@ -76,6 +84,10 @@ input[type="radio"]:nth-of-type(3) {
     height: 15px;
     background-size: 100%;
     background-image: url("../src/assets/filter\ buttons/tank.png");
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 input[type="radio"]:nth-of-type(4) {
@@ -84,6 +96,10 @@ input[type="radio"]:nth-of-type(4) {
     height: 15px;
     background-size: 100%;
     background-image: url("../src/assets/filter\ buttons/mage.png");
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 input[type="radio"]:nth-of-type(5) {
@@ -92,6 +108,10 @@ input[type="radio"]:nth-of-type(5) {
     height: 15px;
     background-size: 100%;
     background-image: url("../src/assets/filter\ buttons/marksman.png");
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 
@@ -101,6 +121,10 @@ input[type="radio"]:nth-of-type(6) {
     height: 15px;
     background-size: 95%;
     background-image: url("../src/assets/filter\ buttons/assassin.png");
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 input[type="radio"]:nth-of-type(7) {
@@ -109,6 +133,10 @@ input[type="radio"]:nth-of-type(7) {
     height: 15px;
     background-image: url("../src/assets/filter\ buttons/support.png");
     background-size: 95%;
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .all-champs-list {

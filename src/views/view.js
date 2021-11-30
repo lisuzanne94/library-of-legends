@@ -1,12 +1,14 @@
 import IndexPage from "./index_page";
 import SingleChampPage from "./single_champ_page";
 import ChampData from "../scripts/get_champ_data";
+import Audio from "./audio_player";
 
 class View {
 
     constructor() {
         this.index = new IndexPage();
         this.singleChampPage = new SingleChampPage();
+        this.audio = new Audio();
         this.filterButtons = document.querySelector("#filter-buttons");
         this.filteredChampsList = document.querySelector(".filtered-champs-list");
         this.currentChamp = null;

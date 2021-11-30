@@ -8,6 +8,7 @@ class IndexPage {
 
         const singleChampDiv = document.querySelector(".single-champ-page");
         singleChampDiv.style.display = "none";
+
     }
 
     // all portraits
@@ -40,5 +41,5 @@ class IndexPage {
     }
 }
 
-export default IndexPage
+export default IndexPage;
 
