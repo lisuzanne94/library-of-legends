@@ -182,6 +182,7 @@ input[type=radio]:nth-of-type(7):hover {
   width: 100px;
   height: auto;
   transition: width 0.5s;
+  cursor: pointer;
 }
 
 .all-champs-list figure:hover h3 {
@@ -247,17 +248,30 @@ input[type=radio]:nth-of-type(7):hover {
   animation: fade-in 1.5s;
 }
 
+#left-arrow {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+  right: 96%;
+  bottom: 50%;
+  z-index: 3;
+}
+#left-arrow:hover {
+  color: white;
+  cursor: pointer;
+}
+
 #right-arrow {
   position: absolute;
   color: rgba(255, 255, 255, 0.5);
   font-size: 28px;
-  left: 97%;
+  left: 96%;
   bottom: 50%;
   z-index: 3;
 }
-
 #right-arrow:hover {
   color: white;
+  cursor: pointer;
 }
 
 .single-champ-page h3 {

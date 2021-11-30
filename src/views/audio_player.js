@@ -1,14 +1,10 @@
 class Audio {
     constructor() {
         const audio = document.getElementById("bg-audio");
+        audio.volume = 0.2;
         document.getElementById("play-btn").style.display = "none";
         this.audio = audio;
-        this.configAudioVol();
         this.toggleAudio();
-    }
-
-    configAudioVol() {
-        this.audio.volume = 0.2;
     }
 
     toggleAudio() {
