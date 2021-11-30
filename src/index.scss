@@ -34,6 +34,10 @@ a:hover {
     color: white;
 }
 
+#play-btn, #pause-btn {
+    color: white;
+}
+
 body:not(#main-header) {
     background-color: #010a13;
     background-image: url("../src/assets/StarGuardian19_Celebration_BG.png");
