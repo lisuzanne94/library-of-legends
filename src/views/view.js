@@ -35,10 +35,13 @@ class View {
     }
 
     closeWelcomeModal() {
-        const x = document.getElementById("close-welcome");
-        const welcome = document.getElementById("welcome");
-        x.addEventListener("click", () => {
-            welcome.style.display = "none";
+        const close = document.getElementById("enter-close");
+        const welcome = document.querySelector(".welcome");
+        const audio = document.getElementById("bg-audio");
+        close.addEventListener("click", () => {
+            welcome.classList.add("animate-fade-out")
+            // welcome.style.display = "none";
+            audio.play();
         })
     }
 

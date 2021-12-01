@@ -30,12 +30,20 @@
 
     <header>
         <h1 id="main-header">LIBRARY OF LEGENDS</h1>
-        <audio id="bg-audio" src="src/assets/queue-audio.mp3" allow="autoplay" autoplay="true"></audio>
-        <span>
+        <audio id="bg-audio" src="src/assets/queue-audio.mp3"></audio>
+        <span class="topleft-icons">
             <!-- <i id="play-btn" class="fas fa-music"></i>
             <i id="pause-btn" class="fas fa-pause"></i> -->
-            <a class="icon" href="https://github.com/lisuzanne94/library-of-legends" target="_blank"><i class="fab fa-github"></i></a>
-            <a class="icon" href="https://www.linkedin.com/in/suzanne-li-080036161/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <div class="brand-icons">
+                <a class="icon" href="https://github.com/lisuzanne94/library-of-legends" target="_blank"><i class="fab fa-github"></i></a>
+                <a class="icon" href="https://www.linkedin.com/in/suzanne-li-080036161/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a class="icon" href="https://angel.co/u/suzanne-li-2" target="_blank"><i class="fab fa-angellist"></i></a>
+            </div>
+            
+            <div class="music-icon">
+                <i id="play-btn" class="fas fa-music"></i>
+                <i id="pause-btn" class="fas fa-pause"></i>
+            </div>
         </span>
 
     </header>
@@ -61,18 +69,19 @@
         <ul class="all-champs-list"></ul>
     </div>
 
-    <div id="welcome">
-        <span id="close-welcome">x</span>
+    <div class="welcome">
+        <!-- <span id="close-welcome">x</span> -->
         <h3>Welcome to the Library of Legends!</h3>
         <p id="welcome-msg">
             Library of Legends is inspired from the online multiplayer battle arena game League of Legends, where players can choose from 157 playable characters to play as (each known as a champion). 
             <br />
             Here, you can:
             <ul>
-                <li>Explore each champion's personal lore</li>
+                <li>Explore each champion's personal backstory</li>
                 <li>Read up on their unique abilities that you can use in game</li>
                 <li>Look through their available "skins", cosmetic alterations that change up their look</li>
             </ul>
+            <span id="enter-close">Enter</span>
             <br />
             Got questions? <a href="https://www.linkedin.com/in/suzanne-li-080036161/" target="_blank">Let me know!</a>
         </p>
@@ -94,11 +103,6 @@
             <br>
             <ul id="champ-spell-list"></ul>
         </div>
-    </div>
-
-    <div class="music-icon">
-        <i id="play-btn" class="fas fa-music"></i>
-        <i id="pause-btn" class="fas fa-pause"></i>
     </div>
 </body>
 </html>

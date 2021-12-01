@@ -17,6 +17,7 @@ header {
   -webkit-text-fill-color: transparent;
   background-image: url("../src/assets/night-light-background-bokeh-blur-600w-1850702212.webp");
   -webkit-background-clip: text;
+  background-clip: transparent;
   background-position: 90% 90%;
   opacity: 0.9;
 }
@@ -36,10 +37,14 @@ span {
   color: white;
 }
 
+.topleft-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
 .music-icon {
-  position: fixed;
-  right: 1%;
-  bottom: 5%;
+  right: 0;
 }
 
 #play-btn, #pause-btn {
@@ -202,24 +207,40 @@ input[type=radio]:nth-of-type(7):hover {
   color: white;
 }
 
-#welcome {
+.welcome {
   position: fixed;
   display: flex;
   flex-direction: column;
-  top: 25%;
-  right: 10%;
-  width: 500px;
-  height: 300px;
-  background-color: white;
-  color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
   z-index: 10;
+}
+
+.animate-fade-out {
+  transform: translate(-100%);
+  animation: fade-out 3s;
+}
+
+#welcome-msg {
+  margin: auto;
 }
 
 #close-welcome {
   text-align: right;
-  color: black;
+  color: white;
 }
 #close-welcome:hover {
+  cursor: pointer;
+}
+
+#enter-close {
+  color: white;
+}
+#enter-close:hover {
   cursor: pointer;
 }
 
@@ -248,6 +269,16 @@ input[type=radio]:nth-of-type(7):hover {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -100%);
+    opacity: 0;
   }
 }
 .single-champ-page {
