@@ -16,8 +16,9 @@ class View {
 
         this.renderIndexPage();
         this.showFilteredChamps();
-        this.switchNextSkin()
-        this.switchPrevSkin()
+        this.switchNextSkin();
+        this.switchPrevSkin();
+        this.closeWelcomeModal();
     }
 
     renderIndexPage(tag) {
@@ -31,6 +32,14 @@ class View {
             const tag = tags[i];
             tag.addEventListener("click", this.handleClickOnFilter.bind(this))
         };
+    }
+
+    closeWelcomeModal() {
+        const x = document.getElementById("close-welcome");
+        const welcome = document.getElementById("welcome");
+        x.addEventListener("click", () => {
+            welcome.style.display = "none";
+        })
     }
 
     handleClickOnFilter(event) {
@@ -60,9 +69,9 @@ class View {
         }
 
         document.querySelector("body").append(singleChampDiv)
-        const welcome = document.querySelector("#welcome");
+        const instructions = document.querySelector("#instructions");
         singleChampDiv.style.display = "";
-        welcome.innerText = "";
+        instructions.innerText = "";
         this.singleChampPage.renderPage(champKey);
         this.currentChamp = champKey;
     }

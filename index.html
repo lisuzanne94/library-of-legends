@@ -31,11 +31,11 @@
     <header>
         <h1 id="main-header">LIBRARY OF LEGENDS</h1>
         <audio id="bg-audio" src="src/assets/queue-audio.mp3" allow="autoplay" autoplay="true"></audio>
-        <i id="play-btn" class="fas fa-play"></i>
-        <i id="pause-btn" class="fas fa-pause"></i>
         <span>
-            <a href="https://github.com/lisuzanne94/library-of-legends" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/suzanne-li-080036161/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <!-- <i id="play-btn" class="fas fa-music"></i>
+            <i id="pause-btn" class="fas fa-pause"></i> -->
+            <a class="icon" href="https://github.com/lisuzanne94/library-of-legends" target="_blank"><i class="fab fa-github"></i></a>
+            <a class="icon" href="https://www.linkedin.com/in/suzanne-li-080036161/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </span>
 
     </header>
@@ -61,7 +61,24 @@
         <ul class="all-champs-list"></ul>
     </div>
 
-    <div id="welcome"><center>Select a tag to filter champions by type & click on a champion's portrait to display their details.<br><br>Click the arrow on the champion's page to scroll through their skins.</center>
+    <div id="welcome">
+        <span id="close-welcome">x</span>
+        <h3>Welcome to the Library of Legends!</h3>
+        <p id="welcome-msg">
+            Library of Legends is inspired from the online multiplayer battle arena game League of Legends, where players can choose from 157 playable characters to play as (each known as a champion). 
+            <br />
+            Here, you can:
+            <ul>
+                <li>Explore each champion's personal lore</li>
+                <li>Read up on their unique abilities that you can use in game</li>
+                <li>Look through their available "skins", cosmetic alterations that change up their look</li>
+            </ul>
+            <br />
+            Got questions? <a href="https://www.linkedin.com/in/suzanne-li-080036161/" target="_blank">Let me know!</a>
+        </p>
+    </div>
+
+    <div id="instructions"><center>Select a tag to filter champions by type & click on a champion's portrait to display their details.<br><br>Click the arrow on the champion's page to scroll through their skins.</center>
     </div>
 
     <figure>
@@ -79,5 +96,9 @@
         </div>
     </div>
 
+    <div class="music-icon">
+        <i id="play-btn" class="fas fa-music"></i>
+        <i id="pause-btn" class="fas fa-pause"></i>
+    </div>
 </body>
 </html>

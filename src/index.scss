@@ -25,17 +25,31 @@ span {
     margin-right: 10px;
 }
 
-a:any-link {
+.icon:any-link {
     color: rgba(255, 255, 255, 0.416);
     text-decoration: none;
 }
 
-a:hover {
+.icon:hover {
     color: white;
 }
 
+.music-icon {
+    position: fixed;
+    right: 1%;
+    bottom: 5%;
+}
+
 #play-btn, #pause-btn {
-    color: white;
+    margin: 0 20px 0 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.416);
+
+    &:hover {
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+    }
 }
 
 body:not(#main-header) {
@@ -56,6 +70,8 @@ body:not(#main-header) {
     font-size: 24px;
     margin-bottom: 10px;
 }
+
+
 
 
 input[type="radio"]:nth-of-type(1) {
@@ -199,6 +215,28 @@ input[type="radio"]:nth-of-type(7) {
 }
 
 #welcome {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 25%;
+    right: 10%;
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    color: black;
+    z-index: 10;
+}
+
+#close-welcome {
+    text-align: right;
+    color: black;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#instructions {
     position: absolute;
     left: 55%;
     top: 40%;
@@ -389,7 +427,7 @@ input[type="radio"]:nth-of-type(7) {
         font-size: 24px;
     }
 
-    #welcome {
+    #instructions {
         left: 50%;
         top: 40%;
         font-size: 20px;
