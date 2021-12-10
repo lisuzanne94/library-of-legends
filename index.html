@@ -14,12 +14,14 @@
     <link rel="stylesheet" href="./src/styles/css_reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Inconsolata:wght@300&family=Staatliches&family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
         integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="./dist/main.css" />
+    <!-- favicon from: https://www.deviantart.com/rengatv/art/league-of-legends-icon-807713711 -->
+    <link rel="icon" type="image/x-icon" href="src/assets/favicon.ico">
     <script src="./dist/main.js"></script>
     <title>Library Of Legends</title>
 </head>
@@ -30,8 +32,20 @@
 
     <header>
         <h1 id="main-header">LIBRARY OF LEGENDS</h1>
-        <span>
-            <a href="https://github.com/lisuzanne94" target="_blank"><i class="fab fa-github"></i></a>
+        <audio id="bg-audio" src="src/assets/queue-audio.mp3"></audio>
+        <span class="topleft-icons">
+            <!-- <i id="play-btn" class="fas fa-music"></i>
+            <i id="pause-btn" class="fas fa-pause"></i> -->
+            <div class="brand-icons">
+                <a class="icon" href="https://github.com/lisuzanne94/library-of-legends" target="_blank"><i class="fab fa-github"></i></a>
+                <a class="icon" href="https://www.linkedin.com/in/suzanne-li-080036161/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a class="icon" href="https://angel.co/u/suzanne-li-2" target="_blank"><i class="fab fa-angellist"></i></a>
+            </div>
+            
+            <div class="music-icon">
+                <i id="play-btn" class="fas fa-music"></i>
+                <i id="pause-btn" class="fas fa-pause"></i>
+            </div>
         </span>
 
     </header>
@@ -42,22 +56,37 @@
         <div id="filter-buttons">
             <form>
                 <br>
-                <input type="radio" id="All" name="tag" value="All"><label>All</label>
-                <input type="radio" id="Fighter" name="tag" value="Fighter"><label>Fighter</label>
-                <input type="radio" id="Tank" name="tag" value="Tank"><label>Tank</label>
-                <input type="radio" id="Mage" name="tag" value="Mage"><label>Mage</label>
-                <!-- <br> -->
-                <input type="radio" id="Marksman" name="tag" value="Marksman"><label>Marksman</label>
-                <!-- <center> -->
-                <input type="radio" id="Assassin" name="tag" value="Assassin"><label>Assassin</label>
-                <input type="radio" id="Support" name="tag" value="Support"><label>Support</label>
+                <input type="radio" id="All" name="tag" value="All"><label class="tag-label">All</label>
+                <input type="radio" id="Fighter" name="tag" value="Fighter"><label class="tag-label">Fighter</label>
+                <input type="radio" id="Tank" name="tag" value="Tank"><label class="tag-label">Tank</label>
+                <input type="radio" id="Mage" name="tag" value="Mage"><label class="tag-label">Mage</label>
+                <input type="radio" id="Marksman" name="tag" value="Marksman"><label class="tag-label">Marksman</label>
+                <input type="radio" id="Assassin" name="tag" value="Assassin"><label class="tag-label">Assassin</label>
+                <input type="radio" id="Support" name="tag" value="Support"><label class="tag-label">Support</label>
             </form>
         </div>
 
         <ul class="all-champs-list"></ul>
     </div>
 
-    <div id="welcome"><center>Select a tag to filter champions by type & click on a champion's portrait to display their details.<br><br>Click the arrow on the champion's page to scroll through their skins.</center>
+    <div class="welcome">
+        <div id="welcome-msg">
+            <span id="welcome-header">Welcome to the <h1 id="main-header">LIBRARY OF LEGENDS</h1></span>
+            <p id="welcome-body">
+                <strong>Library of Legends</strong> is inspired from the online multiplayer battle arena game <strong>League of Legends</strong>, where players can choose from 157 playable characters to play as (each known as a <u>champion</u>). Here, you can:
+            </p>
+                <ul id="welcome-list"> 
+                    <li><i class="fas fa-times"></i> Explore each champion's <u>personal backstory</u></li>
+                    <li><i class="fas fa-times"></i> Read up on their <u>unique abilities</u> that you can use in game</li>
+                    <li><i class="fas fa-times"></i> Look through their <u>available "skins"</u>, cosmetic alterations that change up their in-game appearances</li>
+                </ul>
+                <div id="enter-close">Enter</div>
+
+            <div id="contact-msg">Got questions? <a href="https://www.linkedin.com/in/suzanne-li-080036161/" target="_blank">Let me know!</a></div>
+        </div>
+    </div>
+
+    <div id="instructions"><i class="fas fa-times"></i> Select a tag to filter champions by type<br><br><i class="fas fa-times"></i> Click on a champion's portrait to display their details<br><br><i class="fas fa-times"></i> Click the arrows on the champion's page to scroll through their skins<br><br><i class="fas fa-times"></i> Toggle the music on/off by clicking the button in the top right corner
     </div>
 
     <figure>
@@ -67,12 +96,12 @@
     <div class="single-champ-page">
         <h3></h3>
         <div class="champ-details">
+            <figure id="left-arrow"><i class="fas fa-chevron-left"></i></figure>
             <figure id="right-arrow"><i class="fas fa-chevron-right"></i></figure>
             <p id="champ-lore"></p>
             <br>
             <ul id="champ-spell-list"></ul>
         </div>
     </div>
-
 </body>
 </html>

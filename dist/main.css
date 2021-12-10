@@ -14,9 +14,10 @@ header {
   color: white;
   font-size: 84px;
   font-family: "Staatliches", cursive;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: url("../src/assets/night-light-background-bokeh-blur-600w-1850702212.webp");
+  -webkit-background-clip: text;
+  background-clip: transparent;
   background-position: 90% 90%;
   opacity: 0.9;
 }
@@ -27,13 +28,34 @@ span {
   margin-right: 10px;
 }
 
-a:any-link {
+.icon:any-link {
   color: rgba(255, 255, 255, 0.416);
   text-decoration: none;
 }
 
-a:hover {
+.icon:hover {
   color: white;
+}
+
+.topleft-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.music-icon {
+  right: 0;
+}
+
+#play-btn, #pause-btn {
+  margin: 0 20px 0 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.416);
+}
+#play-btn:hover, #pause-btn:hover {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
 }
 
 body:not(#main-header) {
@@ -53,13 +75,20 @@ body:not(#main-header) {
   font-size: 24px;
   margin-bottom: 10px;
 }
+#filter-buttons .tag-label:hover {
+  cursor: pointer;
+  color: white;
+}
 
 input[type=radio]:nth-of-type(1) {
   -webkit-appearance: none;
   width: 15px;
   height: 15px;
-  background-size: 100%;
+  background-size: 125%;
   background-image: url("../src/assets/filter buttons/all.png");
+}
+input[type=radio]:nth-of-type(1):hover {
+  cursor: pointer;
 }
 
 input[type=radio]:nth-of-type(2) {
@@ -67,7 +96,10 @@ input[type=radio]:nth-of-type(2) {
   width: 18px;
   height: 18px;
   background-image: url("../src/assets/filter buttons/fighter.png");
-  background-size: 100%;
+  background-size: 125%;
+}
+input[type=radio]:nth-of-type(2):hover {
+  cursor: pointer;
 }
 
 input[type=radio]:nth-of-type(3) {
@@ -77,6 +109,9 @@ input[type=radio]:nth-of-type(3) {
   background-size: 100%;
   background-image: url("../src/assets/filter buttons/tank.png");
 }
+input[type=radio]:nth-of-type(3):hover {
+  cursor: pointer;
+}
 
 input[type=radio]:nth-of-type(4) {
   -webkit-appearance: none;
@@ -84,6 +119,9 @@ input[type=radio]:nth-of-type(4) {
   height: 15px;
   background-size: 100%;
   background-image: url("../src/assets/filter buttons/mage.png");
+}
+input[type=radio]:nth-of-type(4):hover {
+  cursor: pointer;
 }
 
 input[type=radio]:nth-of-type(5) {
@@ -93,6 +131,9 @@ input[type=radio]:nth-of-type(5) {
   background-size: 100%;
   background-image: url("../src/assets/filter buttons/marksman.png");
 }
+input[type=radio]:nth-of-type(5):hover {
+  cursor: pointer;
+}
 
 input[type=radio]:nth-of-type(6) {
   -webkit-appearance: none;
@@ -101,6 +142,9 @@ input[type=radio]:nth-of-type(6) {
   background-size: 95%;
   background-image: url("../src/assets/filter buttons/assassin.png");
 }
+input[type=radio]:nth-of-type(6):hover {
+  cursor: pointer;
+}
 
 input[type=radio]:nth-of-type(7) {
   -webkit-appearance: none;
@@ -108,6 +152,9 @@ input[type=radio]:nth-of-type(7) {
   height: 15px;
   background-image: url("../src/assets/filter buttons/support.png");
   background-size: 95%;
+}
+input[type=radio]:nth-of-type(7):hover {
+  cursor: pointer;
 }
 
 .all-champs-list {
@@ -157,19 +204,111 @@ input[type=radio]:nth-of-type(7) {
   width: 100px;
   height: auto;
   transition: width 0.5s;
+  cursor: pointer;
 }
 
 .all-champs-list figure:hover h3 {
   color: white;
 }
 
-#welcome {
+.welcome {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  z-index: 10;
+}
+
+.animate-fade-out {
+  transform: translate(-100%);
+  animation: fade-out 3s;
+}
+
+#welcome-msg {
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  font-family: "Inconsolata";
+  margin-top: 75px;
+}
+
+#welcome-header {
+  width: 600px;
+  height: 600px;
+}
+
+#welcome-body {
+  font-size: 1.2em;
+  margin: 0 0 30px 0;
+  line-height: 1.3em;
+}
+#welcome-body strong {
+  color: #ffdfa0;
+}
+
+#welcome-list {
+  text-align: left;
+  color: #ffb0cf;
+  font-size: 1.1em;
+  margin: 0 0 30px 0;
+  line-height: 1.3em;
+}
+#welcome-list i {
+  font-size: 12px;
+  color: white;
+}
+
+#close-welcome {
+  text-align: right;
+  color: white;
+}
+#close-welcome:hover {
+  cursor: pointer;
+}
+
+#enter-close {
+  color: black;
+  font-size: 24px;
+  width: fit-content;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #187f59;
+  border-radius: 2px;
+  padding: 7px 15px;
+}
+#enter-close:hover {
+  cursor: pointer;
+  color: white;
+}
+#enter-close i {
+  color: white;
+}
+
+#contact-msg a:link, #contact-msg a:visited {
+  text-decoration: none;
+  color: #3464d2;
+}
+#contact-msg a:hover {
+  color: #7892cd;
+}
+
+#instructions {
   position: absolute;
   left: 55%;
   top: 40%;
   font-size: 30px;
   width: 500px;
   color: rgba(255, 255, 255, 0.8);
+}
+#instructions i {
+  font-size: 10px;
 }
 
 @keyframes slide-left {
@@ -188,6 +327,16 @@ input[type=radio]:nth-of-type(7) {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -100%);
   }
 }
 .single-champ-page {
@@ -222,17 +371,30 @@ input[type=radio]:nth-of-type(7) {
   animation: fade-in 1.5s;
 }
 
+#left-arrow {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+  right: 96%;
+  bottom: 50%;
+  z-index: 3;
+}
+#left-arrow:hover {
+  color: white;
+  cursor: pointer;
+}
+
 #right-arrow {
   position: absolute;
   color: rgba(255, 255, 255, 0.5);
   font-size: 28px;
-  left: 97%;
+  left: 96%;
   bottom: 50%;
   z-index: 3;
 }
-
 #right-arrow:hover {
   color: white;
+  cursor: pointer;
 }
 
 .single-champ-page h3 {
@@ -242,6 +404,9 @@ input[type=radio]:nth-of-type(7) {
   text-shadow: 1px 1px black;
   animation: slide-left 2s;
 }
+.single-champ-page h3:hover {
+  color: white;
+}
 
 .champ-details #champ-lore {
   width: 100%;
@@ -250,6 +415,9 @@ input[type=radio]:nth-of-type(7) {
   background: rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px black;
   text-align: center;
+}
+.champ-details #champ-lore:hover {
+  color: white;
 }
 
 .single-champ-page #champ-spell-list {
@@ -270,6 +438,9 @@ input[type=radio]:nth-of-type(7) {
   height: 150px;
   overflow: scroll;
   scrollbar-width: none;
+}
+#champ-spell-list li:hover {
+  color: white;
 }
 
 #champ-spell-list li::-webkit-scrollbar {
@@ -331,7 +502,7 @@ input[type=radio]:nth-of-type(7) {
     font-size: 24px;
   }
 
-  #welcome {
+  #instructions {
     left: 50%;
     top: 40%;
     font-size: 20px;

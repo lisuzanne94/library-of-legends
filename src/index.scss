@@ -12,9 +12,10 @@ header {
     color: rgb(255, 255, 255);
     font-size: 84px;    
     font-family: 'Staatliches', cursive;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: url("../src/assets/night-light-background-bokeh-blur-600w-1850702212.webp");
+    -webkit-background-clip: text;
+    background-clip: transparent;
     background-position: 90% 90%;
     opacity: 0.9;
 }
@@ -25,13 +26,35 @@ span {
     margin-right: 10px;
 }
 
-a:any-link {
+.icon:any-link {
     color: rgba(255, 255, 255, 0.416);
     text-decoration: none;
 }
 
-a:hover {
+.icon:hover {
     color: white;
+}
+
+.topleft-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.music-icon {
+    right: 0;
+}
+
+#play-btn, #pause-btn {
+    margin: 0 20px 0 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.416);
+
+    &:hover {
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+    }
 }
 
 body:not(#main-header) {
@@ -51,15 +74,26 @@ body:not(#main-header) {
     color: rgba(255, 255, 255, 0.766);
     font-size: 24px;
     margin-bottom: 10px;
+
+    .tag-label:hover {
+        cursor: pointer;
+        color: white;
+    }
 }
+
+
 
 
 input[type="radio"]:nth-of-type(1) {
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
-    background-size: 100%;
+    background-size: 125%;
     background-image: url("../src/assets/filter\ buttons/all.png");
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 input[type="radio"]:nth-of-type(2) {
@@ -67,7 +101,11 @@ input[type="radio"]:nth-of-type(2) {
     width: 18px;
     height: 18px;
     background-image: url("../src/assets/filter\ buttons/fighter.png");
-    background-size: 100%;
+    background-size: 125%;
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 input[type="radio"]:nth-of-type(3) {
@@ -76,6 +114,10 @@ input[type="radio"]:nth-of-type(3) {
     height: 15px;
     background-size: 100%;
     background-image: url("../src/assets/filter\ buttons/tank.png");
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 input[type="radio"]:nth-of-type(4) {
@@ -84,6 +126,10 @@ input[type="radio"]:nth-of-type(4) {
     height: 15px;
     background-size: 100%;
     background-image: url("../src/assets/filter\ buttons/mage.png");
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 input[type="radio"]:nth-of-type(5) {
@@ -92,6 +138,10 @@ input[type="radio"]:nth-of-type(5) {
     height: 15px;
     background-size: 100%;
     background-image: url("../src/assets/filter\ buttons/marksman.png");
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 
@@ -101,6 +151,10 @@ input[type="radio"]:nth-of-type(6) {
     height: 15px;
     background-size: 95%;
     background-image: url("../src/assets/filter\ buttons/assassin.png");
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 input[type="radio"]:nth-of-type(7) {
@@ -109,6 +163,10 @@ input[type="radio"]:nth-of-type(7) {
     height: 15px;
     background-image: url("../src/assets/filter\ buttons/support.png");
     background-size: 95%;
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .all-champs-list {
@@ -159,19 +217,120 @@ input[type="radio"]:nth-of-type(7) {
     width: 100px;
     height: auto;
     transition: width 0.5s;
+    cursor: pointer;
 }
 
 .all-champs-list figure:hover h3 {
     color: white;
 }
 
-#welcome {
+.welcome {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000, $alpha: 0.9);
+    color: white;
+    z-index: 10;
+}
+
+.animate-fade-out {
+    transform: translate(-100%);
+    animation: fade-out 3s;
+}
+
+#welcome-msg {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    font-family: 'Inconsolata';
+    margin-top: 75px;
+}
+
+#welcome-header {
+    width: 600px;
+    height: 600px;
+}
+
+#welcome-body {
+    font-size: 1.2em;
+    margin: 0 0 30px 0;
+    line-height: 1.3em;
+
+    strong {
+        color: rgb(255, 223, 160);
+    }
+}
+
+#welcome-list {
+    text-align: left;
+    color: rgb(255, 176, 207);
+    font-size: 1.1em;
+    margin: 0 0 30px 0; 
+    line-height: 1.3em;
+
+    i {
+        font-size: 12px;
+        color: white;
+    }
+}
+
+#close-welcome {
+    text-align: right;
+    color: white;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#enter-close {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    width: fit-content;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(24, 127, 89);
+    border-radius: 2px;
+    padding: 7px 15px;
+
+    &:hover {
+        cursor: pointer;
+        color: white
+    }
+
+    i {
+        color: white;
+    }
+}
+
+#contact-msg a {
+    &:link, &:visited {
+        text-decoration: none;
+        color: rgb(52, 100, 210);
+    }
+
+    &:hover {
+        color: rgb(120, 146, 205);
+    }
+}
+
+#instructions {
     position: absolute;
     left: 55%;
     top: 40%;
     font-size: 30px;
     width: 500px;
     color: rgba(255, 255, 255, 0.8);
+    
+    i {
+        font-size: 10px;
+    }
 }
 
 
@@ -195,6 +354,17 @@ input[type="radio"]:nth-of-type(7) {
     } 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, -100%);
     }
 }
 
@@ -230,18 +400,34 @@ input[type="radio"]:nth-of-type(7) {
     animation: fade-in 1.5s;
 }
 
+#left-arrow {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 28px;
+    right: 96%;
+    bottom: 50%;
+    z-index: 3;
+
+    &:hover {
+        color: white;
+        cursor: pointer;
+    }
+}
+
 #right-arrow {
     position: absolute;
     color: rgba(255, 255, 255, 0.5);
     font-size: 28px;
-    left: 97%;
+    left: 96%;
     bottom: 50%;
     z-index: 3;
+
+    &:hover {
+        color: white;
+        cursor: pointer;
+    }
 }
 
-#right-arrow:hover {
-    color: white;
-}
 
 .single-champ-page h3 {
     font-size: 48px;
@@ -249,6 +435,10 @@ input[type="radio"]:nth-of-type(7) {
     color: rgba(255, 255, 255, 0.8);
     text-shadow: 1px 1px rgb(0, 0, 0);
     animation: slide-left 2s;
+
+    &:hover {
+        color: white;
+    }
 }
 
 .champ-details #champ-lore {
@@ -258,6 +448,10 @@ input[type="radio"]:nth-of-type(7) {
     background: rgba($color: #000000, $alpha: 0.3);
     text-shadow: 1px 1px black;
     text-align: center;
+
+    &:hover {
+        color: white;
+    }
 }
 
 .single-champ-page #champ-spell-list {
@@ -278,6 +472,10 @@ input[type="radio"]:nth-of-type(7) {
     height: 150px;
     overflow: scroll;
     scrollbar-width: none;
+
+    &:hover {
+        color: white;
+    }
 }
 
 #champ-spell-list li::-webkit-scrollbar {
@@ -317,7 +515,7 @@ input[type="radio"]:nth-of-type(7) {
         top: 15%;
     }
 
-    .single-champ-page #champ-lore, {
+    .single-champ-page #champ-lore {
         font-size: 24px;
     }
 
@@ -340,7 +538,7 @@ input[type="radio"]:nth-of-type(7) {
         font-size: 24px;
     }
 
-    #welcome {
+    #instructions {
         left: 50%;
         top: 40%;
         font-size: 20px;
@@ -366,7 +564,7 @@ input[type="radio"]:nth-of-type(7) {
         height: 400px;
     }
 
-    .single-champ-page #champ-lore, {
+    .single-champ-page #champ-lore {
         font-size: 15px;
     }
 

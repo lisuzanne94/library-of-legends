@@ -22,11 +22,11 @@ const ChampData = {
 
     // get champ's loading screen portrait URL
     getChampPortraitURL(champKey) {
-        return `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champKey}_0.jpg`
+        return `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champKey}_0.jpg`
     },
 
     getChampSplashArtURL(champKey) {
-        return `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champKey}_0.jpg`
+        return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champKey}_0.jpg`
     },
 
     // get a champ's tags
@@ -97,7 +97,7 @@ const ChampData = {
         const skinNums = this.getChampSkinNums(champKey);
         const skinURLs = [];
         skinNums.forEach(num => {
-            skinURLs.push(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champKey}_${num}.jpg`)
+            skinURLs.push(`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champKey}_${num}.jpg`)
         })
         return skinURLs;
     },
