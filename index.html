@@ -14,12 +14,14 @@
     <link rel="stylesheet" href="./src/styles/css_reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Inconsolata:wght@300&family=Staatliches&family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
         integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="./dist/main.css" />
+    <!-- favicon from: https://www.deviantart.com/rengatv/art/league-of-legends-icon-807713711 -->
+    <link rel="icon" type="image/x-icon" href="src/assets/favicon.ico">
     <script src="./dist/main.js"></script>
     <title>Library Of Legends</title>
 </head>
@@ -70,21 +72,23 @@
     </div>
 
     <div class="welcome">
-        <!-- <span id="close-welcome">x</span> -->
-        <h3>Welcome to the Library of Legends!</h3>
-        <p id="welcome-msg">
-            Library of Legends is inspired from the online multiplayer battle arena game League of Legends, where players can choose from 157 playable characters to play as (each known as a champion). 
-            <br />
-            Here, you can:
-            <ul>
-                <li>Explore each champion's personal backstory</li>
-                <li>Read up on their unique abilities that you can use in game</li>
-                <li>Look through their available "skins", cosmetic alterations that change up their look</li>
-            </ul>
-            <span id="enter-close">Enter</span>
-            <br />
-            Got questions? <a href="https://www.linkedin.com/in/suzanne-li-080036161/" target="_blank">Let me know!</a>
-        </p>
+        <div id="welcome-msg">
+            <!-- <span id="close-welcome">x</span> -->
+            <span id="welcome-header">Welcome to the <h1 id="main-header">LIBRARY OF LEGENDS</h1></span>
+            <p id="welcome-body">
+                <strong>Library of Legends</strong> is inspired from the online multiplayer battle arena game <strong>League of Legends</strong>, where players can choose from 157 playable characters to play as (each known as a champion). 
+
+                Here, you can:
+            </p>
+                <ul id="welcome-list"> 
+                    <li><i class="fas fa-times"></i> Explore each champion's personal backstory</li>
+                    <li><i class="fas fa-times"></i> Read up on their unique abilities that you can use in game</li>
+                    <li><i class="fas fa-times"></i> Look through their available "skins", cosmetic alterations that change up their look</li>
+                </ul>
+                <div id="enter-close"><i class="fas fa-door-open"></i>Enter</div>
+
+            <div id="contact-msg">Got questions? <a href="https://www.linkedin.com/in/suzanne-li-080036161/" target="_blank">Let me know!</a></div>
+        </div>
     </div>
 
     <div id="instructions"><center>Select a tag to filter champions by type & click on a champion's portrait to display their details.<br><br>Click the arrow on the champion's page to scroll through their skins.</center>

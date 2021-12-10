@@ -98,7 +98,7 @@ class View {
         bg.remove();
         bg = document.createElement("img")
         bg.setAttribute("id", "bg-img")
-        bg.setAttribute("src", `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.currentChamp}_${skinNums[Math.abs(this.i % skinNums.length)]}.jpg`)
+        bg.setAttribute("src", `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.currentChamp}_${skinNums[Math.abs(this.i % skinNums.length)]}.jpg`)
         champDetails.append(bg);
     }
 
@@ -115,7 +115,7 @@ class View {
         bg.remove();
         bg = document.createElement("img")
         bg.setAttribute("id", "bg-img")
-        bg.setAttribute("src", `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.currentChamp}_${skinNums[Math.abs(this.i % skinNums.length)]}.jpg`)
+        bg.setAttribute("src", `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.currentChamp}_${skinNums[Math.abs(this.i % skinNums.length)]}.jpg`)
         // console.log(this.i)
         champDetails.append(bg);
     }

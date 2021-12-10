@@ -223,7 +223,8 @@ input[type="radio"]:nth-of-type(7) {
     position: fixed;
     display: flex;
     flex-direction: column;
-    // top: 25%;
+    // justify-content: center;
+    align-items: center;
     // right: 10%;
     // width: 500px;
     // height: 300px;
@@ -231,7 +232,7 @@ input[type="radio"]:nth-of-type(7) {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($color: #000, $alpha: 1);
+    background-color: rgba($color: #000, $alpha: 0.95);
     color: white;
     z-index: 10;
 }
@@ -242,7 +243,40 @@ input[type="radio"]:nth-of-type(7) {
 }
 
 #welcome-msg {
-    margin: auto;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    font-family: 'Inconsolata';
+    margin-top: 75px;
+}
+
+#welcome-header {
+    width: 600px;
+    height: 600px;
+    // color: rgb(36, 113, 36);
+}
+
+#welcome-body {
+    // color: rgb(255, 209, 116);
+    font-size: 1.2em;
+    margin: 0 0 30px 0;
+
+    strong {
+        color: rgb(255, 223, 160);
+    }
+}
+
+#welcome-list {
+    text-align: left;
+    // color: rgb(173, 83, 146);
+    color: rgb(255, 176, 207);
+    font-size: 1.1em;
+    margin: 0 0 30px 0; 
+
+    i {
+        font-size: 12px;
+        color: white;
+    }
 }
 
 #close-welcome {
@@ -255,12 +289,25 @@ input[type="radio"]:nth-of-type(7) {
 }
 
 #enter-close {
-    color: white;
-
+    // color: white;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    width: fit-content;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(104, 197, 151, 0.656);
+    border-radius: 2px;
+    padding: 7px 15px;
 
     &:hover {
         cursor: pointer;
+        color: white
     }
+}
+
+#contact-msg {
+    // bottom: 10px;
 }
 
 #instructions {
@@ -302,8 +349,8 @@ input[type="radio"]:nth-of-type(7) {
         opacity: 1;
     }
     100% {
-        transform: translate(0, -100%);
         opacity: 0;
+        transform: translate(0, -100%);
     }
 }
 

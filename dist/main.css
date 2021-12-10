@@ -211,11 +211,12 @@ input[type=radio]:nth-of-type(7):hover {
   position: fixed;
   display: flex;
   flex-direction: column;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.95);
   color: white;
   z-index: 10;
 }
@@ -226,7 +227,35 @@ input[type=radio]:nth-of-type(7):hover {
 }
 
 #welcome-msg {
-  margin: auto;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  font-family: "Inconsolata";
+  margin-top: 75px;
+}
+
+#welcome-header {
+  width: 600px;
+  height: 600px;
+}
+
+#welcome-body {
+  font-size: 1.2em;
+  margin: 0 0 30px 0;
+}
+#welcome-body strong {
+  color: #ffdfa0;
+}
+
+#welcome-list {
+  text-align: left;
+  color: #ffb0cf;
+  font-size: 1.1em;
+  margin: 0 0 30px 0;
+}
+#welcome-list i {
+  font-size: 12px;
+  color: white;
 }
 
 #close-welcome {
@@ -238,10 +267,19 @@ input[type=radio]:nth-of-type(7):hover {
 }
 
 #enter-close {
-  color: white;
+  color: black;
+  font-size: 24px;
+  width: fit-content;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(104, 197, 151, 0.656);
+  border-radius: 2px;
+  padding: 7px 15px;
 }
 #enter-close:hover {
   cursor: pointer;
+  color: white;
 }
 
 #instructions {
@@ -277,8 +315,8 @@ input[type=radio]:nth-of-type(7):hover {
     opacity: 1;
   }
   100% {
-    transform: translate(0, -100%);
     opacity: 0;
+    transform: translate(0, -100%);
   }
 }
 .single-champ-page {
