@@ -74,6 +74,11 @@ body:not(#main-header) {
     color: rgba(255, 255, 255, 0.766);
     font-size: 24px;
     margin-bottom: 10px;
+
+    .tag-label:hover {
+        cursor: pointer;
+        color: white;
+    }
 }
 
 
@@ -223,11 +228,7 @@ input[type="radio"]:nth-of-type(7) {
     position: fixed;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
-    // right: 10%;
-    // width: 500px;
-    // height: 300px;
     top: 0;
     left: 0;
     width: 100%;
@@ -253,13 +254,12 @@ input[type="radio"]:nth-of-type(7) {
 #welcome-header {
     width: 600px;
     height: 600px;
-    // color: rgb(36, 113, 36);
 }
 
 #welcome-body {
-    // color: rgb(255, 209, 116);
     font-size: 1.2em;
     margin: 0 0 30px 0;
+    line-height: 1.3em;
 
     strong {
         color: rgb(255, 223, 160);
@@ -268,10 +268,10 @@ input[type="radio"]:nth-of-type(7) {
 
 #welcome-list {
     text-align: left;
-    // color: rgb(173, 83, 146);
     color: rgb(255, 176, 207);
     font-size: 1.1em;
     margin: 0 0 30px 0; 
+    line-height: 1.3em;
 
     i {
         font-size: 12px;
@@ -289,14 +289,13 @@ input[type="radio"]:nth-of-type(7) {
 }
 
 #enter-close {
-    // color: white;
     color: rgb(0, 0, 0);
     font-size: 24px;
     width: fit-content;
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(104, 197, 151, 0.656);
+    background-color: rgb(24, 127, 89);
     border-radius: 2px;
     padding: 7px 15px;
 
@@ -304,10 +303,21 @@ input[type="radio"]:nth-of-type(7) {
         cursor: pointer;
         color: white
     }
+
+    i {
+        color: white;
+    }
 }
 
-#contact-msg {
-    // bottom: 10px;
+#contact-msg a {
+    &:link, &:visited {
+        text-decoration: none;
+        color: rgb(52, 100, 210);
+    }
+
+    &:hover {
+        color: rgb(120, 146, 205);
+    }
 }
 
 #instructions {

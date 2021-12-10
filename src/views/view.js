@@ -28,9 +28,12 @@ class View {
 
     showFilteredChamps() {
         const tags = document.querySelectorAll("[name='tag']")
+        const labels = document.querySelectorAll(".tag-label")
         for (let i = 0; i < tags.length; i++) {
             const tag = tags[i];
-            tag.addEventListener("click", this.handleClickOnFilter.bind(this))
+            const label = labels[i]
+            tag.addEventListener("click", this.handleClickOnFilterTag.bind(this))
+            label.addEventListener("click", this.handleClickOnFilterLabel.bind(this))
         };
     }
 
@@ -40,14 +43,19 @@ class View {
         const audio = document.getElementById("bg-audio");
         close.addEventListener("click", () => {
             welcome.classList.add("animate-fade-out")
-            // welcome.style.display = "none";
             audio.play();
         })
     }
 
-    handleClickOnFilter(event) {
+    handleClickOnFilterTag(event) {
         const tag = event.target.id;
+        console.log(event.target.innerText)
         this.renderIndexPage(tag);
+    }
+
+    handleClickOnFilterLabel(event) {
+        const label = event.target.innerText;
+        this.renderIndexPage(label);
     }
 
     showChampPage() {
@@ -92,7 +100,6 @@ class View {
     handleClickOnRightArrow() {
         this.incrementCounter();
         const skinNums = ChampData.getChampSkinNums(this.currentChamp);
-        // const singleChampDiv = this.singleChampPage.singleChampDiv
         const champDetails = document.querySelector(".champ-details")
         let bg = document.querySelector("#bg-img");
         bg.remove();
@@ -116,7 +123,6 @@ class View {
         bg = document.createElement("img")
         bg.setAttribute("id", "bg-img")
         bg.setAttribute("src", `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.currentChamp}_${skinNums[Math.abs(this.i % skinNums.length)]}.jpg`)
-        // console.log(this.i)
         champDetails.append(bg);
     }
 
