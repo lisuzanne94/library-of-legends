@@ -220,7 +220,7 @@ input[type=radio]:nth-of-type(7):hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.9);
   color: white;
   z-index: 10;
 }
@@ -306,6 +306,9 @@ input[type=radio]:nth-of-type(7):hover {
   font-size: 30px;
   width: 500px;
   color: rgba(255, 255, 255, 0.8);
+}
+#instructions i {
+  font-size: 10px;
 }
 
 @keyframes slide-left {
@@ -401,6 +404,9 @@ input[type=radio]:nth-of-type(7):hover {
   text-shadow: 1px 1px black;
   animation: slide-left 2s;
 }
+.single-champ-page h3:hover {
+  color: white;
+}
 
 .champ-details #champ-lore {
   width: 100%;
@@ -409,6 +415,9 @@ input[type=radio]:nth-of-type(7):hover {
   background: rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px black;
   text-align: center;
+}
+.champ-details #champ-lore:hover {
+  color: white;
 }
 
 .single-champ-page #champ-spell-list {
@@ -429,6 +438,9 @@ input[type=radio]:nth-of-type(7):hover {
   height: 150px;
   overflow: scroll;
   scrollbar-width: none;
+}
+#champ-spell-list li:hover {
+  color: white;
 }
 
 #champ-spell-list li::-webkit-scrollbar {
