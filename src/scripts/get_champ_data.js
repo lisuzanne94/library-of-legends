@@ -65,11 +65,6 @@ const ChampData = {
             const spellDesc = allChampData.data[champKey].spells[i].description;
             spells.push(spellName);
         }
-        // console.log(allChampData.data["Aatrox"].spells)
-        // const q = allChampData.data["Aatrox"].spells[0].name;
-        // const w = allChampData.data["Aatrox"].spells[1].name;
-        // const e = allChampData.data["Aatrox"].spells[2].name;
-        // const r = allChampData.data["Aatrox"].spells[3].name;
         return spells;
     },
 
@@ -114,29 +109,6 @@ const ChampData = {
         return `https://ddragon.leagueoflegends.com/cdn/11.20.1/img/spell/${spellName}`
     }
 }
-
-// console.log(ChampData.getAllNames());
-// console.log(ChampData.getChampPortraitURL("Aatrox"));
-// how to get champ NAME:
-// console.log(allChampData.data["Velkoz"].name);
-// console.log(ChampData.getAllChampNames())
-// console.log(ChampData.getChampName("Aatrox"))
-// console.log(ChampData.getChampTags("Ahri"))
-// console.log(ChampData.getFilteredChampKeys("Support"))
-// console.log(ChampData.getChampTitle("Teemo"))
-// console.log(ChampData.getChampLore("Aatrox"))
-// console.log(allChampData.data["Aatrox"].spells)
-// console.log(ChampData.getChampSpellNames("Aatrox"))
-// console.log(ChampData.getChampSpellDescs("Aatrox"))
-// console.log(ChampData.getChampSplashArtURL("Aatrox"))
-// const skins = allChampData.data["Aatrox"].skins
-// console.log(ChampData.getChampSkinNums("Aatrox"));
-// console.log(ChampData.getChampSkinURLs("Aatrox"));
-// console.log(allChampData.data["Ahri"].spells[0].image.full);
-// console.log(allChampData.data["Ahri"].spells[1].image.full);
-// console.log(allChampData.data["Ahri"].spells[2].image.full);
-// console.log(allChampData.data["Ahri"].spells[3].image.full);
-// console.log(ChampData.getSpellSuffixes("Vex"));
 
 export default ChampData;
 

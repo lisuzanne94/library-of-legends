@@ -49,7 +49,6 @@ class View {
 
     handleClickOnFilterTag(event) {
         const tag = event.target.id;
-        console.log(event.target.innerText)
         this.renderIndexPage(tag);
     }
 
