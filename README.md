@@ -2,7 +2,7 @@
 
 [Library of Legends Live](https://lisuzanne94.github.io/library-of-legends/)
 
-<img src="title.png"></img>
+<img src="src/assets/title.png"></img>
 
 League of Legends is an online multiplayer battle arena game in which players can choose from 157 different champions to play as. Each champion has individualized background lore and attributes. Library of Legends is a library of all 157 champions, where the user can select a specific champion to display and view their individual profiles. 
 
@@ -43,11 +43,11 @@ handleClickOnPortrait(event) {
         this.currentChamp = champKey;
     }
 ```
-<img src="champ-page.png"></img>
+<img src="src/assets/champ-page.png"></img>
 
 ## Filter by Champion Type
 Users can filter the index of champions by triggering a 'click' event on either the button or the label. Only champions of the specified type will be shown.
-<img src="filter-champs.png"></img>
+<img src="src/assets/filter-champs.png"></img>
 
 # Future Features
 * Ability to search through champions
