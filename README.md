@@ -1,45 +1,57 @@
-**Library of Legends**
+# Library of Legends
 
-# Background & Overview
-League of Legends is an online multiplayer battle arena game in which players can choose from 157 different champions to play as. Each champion has individualized background lore and attributes. Library of Legends is an interactive library that displays all 157 champions, where the user can select a specific champion to display and view their individual profiles. 
+[Library of Legends Live](https://lisuzanne94.github.io/library-of-legends/)
 
+<img src="title.png"></img>
 
-# Functionality & MVPs
-* Users start on the main index page with all champions listed
-* Option to filter champions displayed by champion type
-* Ability to click on a single champion and bring up their "show page"
+League of Legends is an online multiplayer battle arena game in which players can choose from 157 different champions to play as. Each champion has individualized background lore and attributes. Library of Legends is a library of all 157 champions, where the user can select a specific champion to display and view their individual profiles. 
 
-# Wireframe
-<img src="wireframes/wireframe.png"></img>
-
-# Technologies, Libraries, & APIs
+# Technologies
+* VanillaJS
+* CSS3
+* HTML5
 * Webpack to bundle JS code
 
-Static data files:
-* Champion data from Riot Games/Data Dragon: https://ddragon.leagueoflegends.com/cdn/11.20.1/data/en_US/champion.json
-* Champion portraits/splasharts/background from Riot Games/Data Dragon: https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Aatrox_0.jpg
-* Individual champion data from Riot Games/Data Dragon: https://ddragon.leagueoflegends.com/cdn/11.20.1/data/en_US/champion/Aatrox.json
+Data files:
+* Champion data from Riot Games/Data Dragon: https://riot-api-libraries.readthedocs.io/en/latest/ddragon.html
 
-# Implementation Timeline
-* Friday/Weekend
-    - Understanding/coding data retrieval
-    - Set up webpack
-    - Map out project structure
-    - Create project skeleton
-* Monday
-    - Code basic structures of index view and individual champion view
-    - Code in user interaction events
-* Tuesday
-    - Write out CSS and style all views
-    - Reformat code as needed
-* Wednesday
-    - Add finishing touches
-    - Quality check of both user interaction and page style
-* Thursday Morning
-    - Deploy to GitHub
+# Features
+## Individual Champion Profiles
+Users can click on an individual champion's profile to view their details. This click triggers an event utilizing DOM manipulation in VanillaJS. This event removes any currently rendered champion view if one exists and adds a new view for the new champion to be rendered.
 
-# Bonus Features
-* Addition of all available champion skins
+``` javascript
+// src/views/view.js
+handleClickOnPortrait(event) {
+        const champKey = event.target.id;
+
+        const bg = document.querySelector("#bg-img");
+        if (bg) { bg.remove() }
+        
+        const singleChampDiv = document.querySelector(".single-champ-page");
+        if (!singleChampDiv) {
+            singleChampDiv = document.createElement("div");
+            singleChampDiv.classList = ".single-champ-page";
+        } else {
+            singleChampDiv.remove();
+        }
+
+        document.querySelector("body").append(singleChampDiv)
+        const instructions = document.querySelector("#instructions");
+        singleChampDiv.style.display = "";
+        instructions.innerText = "";
+        this.singleChampPage.renderPage(champKey);
+        this.currentChamp = champKey;
+    }
+```
+<img src="champ-page.png"></img>
+
+## Filter by Champion Type
+Users can filter the index of champions by triggering a 'click' event on either the button or the label. Only champions of the specified type will be shown.
+<img src="filter-champs.png"></img>
+
+# Future Features
+* Ability to search through champions
+* Addition of more champion data relevant to the game
 
 
 
