@@ -43,9 +43,15 @@ handleClickOnPortrait(event) {
         this.currentChamp = champKey;
     }
 ```
+<img src="champ-page.png"></img>
 
-# Bonus Features
-* Addition of all available champion skins
+## Filter by Champion Type
+Users can filter the index of champions by triggering a 'click' event on either the button or the label. Only champions of the specified type will be shown.
+<img src="filter-champs.png"></img>
+
+# Future Features
+* Ability to search through champions
+* Addition of more champion data relevant to the game
 
 
 
