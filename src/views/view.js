@@ -132,7 +132,6 @@ class View {
     incrementCounter() {
         this.i += 1;
     }
-
 }
 
 export default View;
