@@ -13,7 +13,7 @@ League of Legends is an online multiplayer battle arena game in which players ca
 * Webpack to bundle JS code
 
 Data files:
-* Champion data from Riot Games/Data Dragon: https://riot-api-libraries.readthedocs.io/en/latest/ddragon.html
+* Champion data from Riot Games/Data Dragon: [https://riot-api-libraries.readthedocs.io/en/latest/ddragon.html](https://riot-api-libraries.readthedocs.io/en/latest/ddragon.html)
 
 # Features
 ## Individual Champion Profiles
